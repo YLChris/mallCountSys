@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yxb.mall.dao.CProductConditionMapper">
+
+    <resultMap type="com.yxb.mall.domain.vo.CProductCondition" id="CProductConditionMap">
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productPrice" column="product_price" jdbcType="VARCHAR"/>
+        <result property="catagory" column="catagory" jdbcType="VARCHAR"/>
+        <result property="kuCunLiang" column="ku_cun_liang" jdbcType="INTEGER"/>
+        <result property="xiaoLiang" column="xiao_liang" jdbcType="INTEGER"/>
+        <result property="xiaoPrice" column="xiao_price" jdbcType="VARCHAR"/>
+        <result property="xiaoTotalPrice" column="xiao_total_price" jdbcType="VARCHAR"/>
+        <result property="liRun" column="li_run" jdbcType="VARCHAR"/>
+        <result property="jingouNum" column="jingou_num" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <insert id="insertCproductCondition"  parameterType="com.yxb.mall.domain.vo.CProductCondition">
+        insert into contentmanagersystem_db.c_product_condition
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="productName != null" >
+                product_name,
+            </if>
+            <if test="productPrice != null" >
+                product_price,
+            </if>
+            <if test="catagory != null" >
+                catagory,
+            </if>
+            <if test="kuCunLiang != null" >
+                ku_cun_liang,
+            </if>
+            <if test="xiaoLiang != null" >
+                xiao_liang,
+            </if>
+            <if test="xiaoPrice != null" >
+                xiao_price,
+            </if>
+            <if test="xiaoTotalPrice != null" >
+                xiao_total_price,
+            </if>
+            <if test="liRun != null" >
+                liRun,
+            </if>
+            <if test="jingouNum != null" >
+                jingou_num
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="productName != null" >
+                #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productPrice != null" >
+                #{productPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="catagory != null" >
+                #{catagory,jdbcType=VARCHAR},
+            </if>
+            <if test="kuCunLiang != null" >
+                #{kuCunLiang,jdbcType=INTEGER},
+            </if>
+            <if test="xiaoLiang != null" >
+                #{xiaoLiang,jdbcType=INTEGER},
+            </if>
+            <if test="xiaoPrice != null" >
+                #{xiaoPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoTotalPrice != null" >
+                #{xiaoTotalPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="liRun != null" >
+                #{liRun,jdbcType=VARCHAR},
+            </if>
+            <if test="jingouNum != null" >
+                #{jingouNum,jdbcType=INTEGER}
+            </if>
+        </trim>
+    </insert>
+    <update id="updateCproductCondition" parameterType="com.yxb.mall.domain.vo.CProductCondition">
+        update contentmanagersystem_db.c_product_condition
+        <set>
+            <if test="productName != null and productName != ''">
+                product_name = #{productName},
+            </if>
+            <if test="productPrice != null and productPrice != ''">
+                product_price = #{productPrice},
+            </if>
+            <if test="catagory != null and catagory != ''">
+                catagory = #{catagory},
+            </if>
+            <if test="kuCunLiang != null">
+                ku_cun_liang = #{kuCunLiang},
+            </if>
+            <if test="xiaoLiang != null">
+                xiao_liang = #{xiaoLiang},
+            </if>
+            <if test="xiaoPrice != null and xiaoPrice != ''">
+                xiao_price = #{xiaoPrice},
+            </if>
+            <if test="xiaoTotalPrice != null and xiaoTotalPrice != ''">
+                xiao_total_price = #{xiaoTotalPrice},
+            </if>
+            <if test="liRun != null and liRun != ''">
+                li_run = #{liRun},
+            </if>
+            <if test="jingouNum != null">
+                jingou_num = #{jingouNum},
+            </if>
+        </set>
+        <where>
+            <if test="productName != null and productName != ''">
+                and product_name = #{productName}
+            </if>
+            <if test="productPrice != null and productPrice != ''">
+                and product_price = #{productPrice}
+            </if>
+            <if test="catagory != null and catagory != ''">
+                and catagory = #{catagory}
+            </if>
+        </where>
+    </update>
+    <select id="queryCproductConditionByCProduct" resultMap="CProductConditionMap">
+        select
+            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
+          from contentmanagersystem_db.c_product_condition
+          <where>
+              <if test="productName != null and productName != ''">
+                  and product_name = #{productName}
+              </if>
+              <if test="productPrice != null and productPrice != ''">
+                  and product_price = #{productPrice}
+              </if>
+              <if test="catagory != null and catagory != ''">
+                  and catagory = #{catagory}
+              </if>
+          </where>
+    </select>
+
+    <!--  &lt;!&ndash;查询单个&ndash;&gt;
+      <select id="queryById" resultMap="CProductConditionMap">
+          select
+            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
+          from contentmanagersystem_db.c_product_condition
+          where  = #{}
+      </select>
+
+      &lt;!&ndash;查询指定行数据
+      <select id="queryAllByLimit" resultMap="CProductConditionMap">
+          select
+            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
+          from contentmanagersystem_db.c_product_condition
+          limit #{offset}, #{limit}
+      </select>
+
+      &lt;!&ndash;通过实体作为筛选条件查询&ndash;&gt;
+      <select id="queryAll" resultMap="CProductConditionMap">
+          select
+            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
+          from contentmanagersystem_db.c_product_condition
+          <where>
+              <if test="productName != null and productName != ''">
+                  and product_name = #{productName}
+              </if>
+              <if test="productPrice != null and productPrice != ''">
+                  and product_price = #{productPrice}
+              </if>
+              <if test="catagory != null and catagory != ''">
+                  and catagory = #{catagory}
+              </if>
+              <if test="kuCunLiang != null">
+                  and ku_cun_liang = #{kuCunLiang}
+              </if>
+              <if test="xiaoLiang != null">
+                  and xiao_liang = #{xiaoLiang}
+              </if>
+              <if test="xiaoPrice != null and xiaoPrice != ''">
+                  and xiao_price = #{xiaoPrice}
+              </if>
+              <if test="xiaoTotalPrice != null and xiaoTotalPrice != ''">
+                  and xiao_total_price = #{xiaoTotalPrice}
+              </if>
+              <if test="liRun != null and liRun != ''">
+                  and li_run = #{liRun}
+              </if>
+              <if test="jingouNum != null">
+                  and jingou_num = #{jingouNum}
+              </if>
+          </where>
+      </select>
+
+      &lt;!&ndash;新增所有列&ndash;&gt;
+      <insert id="insert" keyProperty="" useGeneratedKeys="true">
+          insert into contentmanagersystem_db.c_product_condition(product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num)
+          values (#{productName}, #{productPrice}, #{catagory}, #{kuCunLiang}, #{xiaoLiang}, #{xiaoPrice}, #{xiaoTotalPrice}, #{liRun}, #{jingouNum})
+      </insert>
+
+      &lt;!&ndash;通过主键修改数据&ndash;&gt;
+      <update id="update">
+          update contentmanagersystem_db.c_product_condition
+          <set>
+              <if test="productName != null and productName != ''">
+                  product_name = #{productName},
+              </if>
+              <if test="productPrice != null and productPrice != ''">
+                  product_price = #{productPrice},
+              </if>
+              <if test="catagory != null and catagory != ''">
+                  catagory = #{catagory},
+              </if>
+              <if test="kuCunLiang != null">
+                  ku_cun_liang = #{kuCunLiang},
+              </if>
+              <if test="xiaoLiang != null">
+                  xiao_liang = #{xiaoLiang},
+              </if>
+              <if test="xiaoPrice != null and xiaoPrice != ''">
+                  xiao_price = #{xiaoPrice},
+              </if>
+              <if test="xiaoTotalPrice != null and xiaoTotalPrice != ''">
+                  xiao_total_price = #{xiaoTotalPrice},
+              </if>
+              <if test="liRun != null and liRun != ''">
+                  li_run = #{liRun},
+              </if>
+              <if test="jingouNum != null">
+                  jingou_num = #{jingouNum},
+              </if>
+          </set>
+          where  = #{}
+      </update>
+
+      &lt;!&ndash;通过主键删除&ndash;&gt;
+      <delete id="deleteById">
+          delete from contentmanagersystem_db.c_product_condition where  = #{}
+      </delete>-->
+
+</mapper>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yxb.mall.dao.CProductMapper">
+
+    <resultMap type="com.yxb.mall.domain.vo.CProduct" id="CProductMap">
+        <result property="productId" column="product_id" jdbcType="INTEGER"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="productPrice" column="product_price" jdbcType="VARCHAR"/>
+        <result property="jingouTime" column="jingou_time" jdbcType="TIMESTAMP"/>
+        <result property="jingouOperator" column="jingou_operator" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="updateOperator" column="update_operator" jdbcType="VARCHAR"/>
+        <result property="productNum" column="product_num" jdbcType="VARCHAR"/>
+        <result property="productTotalPrice" column="product_total_price" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="CProductMap">
+        select
+          product_id, product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,productNum,product_total_price
+        from contentmanagersystem_db.c_product
+        where product_id = #{productId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="CProductMap">
+        select
+          product_id, product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,productNum,product_total_price
+        from contentmanagersystem_db.c_product
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="CProductMap">
+        select
+          product_id, product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,product_num,product_total_price
+        from contentmanagersystem_db.c_product
+        <where>
+            <if test="productName != null and productName != ''">
+                and product_name = #{productName}
+            </if>
+            <if test="productPrice != null and productPrice != ''">
+                and product_price = #{productPrice}
+            </if>
+            <if test="catagory != null">
+                and catagory = #{catagory}
+            </if>
+        </where>
+    </select>
+
+    <!-- 查询商品总记录数 -->
+    <select id="selectCountCProduct" parameterType="com.yxb.mall.domain.vo.CProduct" resultType="Long">
+        select count(*)
+        from c_product
+        <where>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'catagory' ">
+                AND catagory = #{searchContent}
+            </if>
+        </where>
+    </select>
+
+    <!-- 商品列表信息分页显示 -->
+    <select id="selectGoodsListByPage" parameterType="com.yxb.mall.domain.vo.CProduct" resultMap="CProductMap">
+        select
+        product_id, product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,product_num,product_total_price
+        from c_product
+        <where>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'catagory' ">
+              AND catagory = #{searchContent}
+            </if>
+        </where>
+        order by jingou_time DESC
+    </select>
+    <!-- 验证角色名称唯一性 -->
+    <select id="selectProductNameCheck" resultType="java.lang.Long">
+        select count(*) from c_product
+        <where>
+            <if test="productName != null and productName != '' " >
+                AND product_name = #{productName,jdbcType=VARCHAR}
+            </if>
+            <if test="productId != null">
+                AND product_id != #{productId,jdbcType=INTEGER}
+            </if>
+            <if test="catagory != null">
+                AND catagory != #{catagory,jdbcType=VARCHAR}
+            </if>
+            <if test="productPrice != null">
+                AND product_price != #{productPrice,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+    <select id="getKuCunLiang" resultMap="CProductMap">
+        select product_id, product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,product_num,product_total_price
+        from c_product
+        <where>
+            <if test="productName != null">
+                product_name = #{productName,jdbcType=VARCHAR}
+            </if>
+            <if test="catagory != null">
+               AND catagory = #{catagory,jdbcType=VARCHAR}
+            </if>
+            <if test="productPrice != null">
+               AND product_price = #{productPrice,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="productId" useGeneratedKeys="true">
+        insert into contentmanagersystem_db.c_product(product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,product_num,product_total_price)
+        values (#{productName}, #{productPrice}, #{jingouTime}, #{jingouOperator}, #{updateTime},#{catagory},#{updateOperator},#{productNum},#{productTotalPrice})
+    </insert>
+    <!--新增商品-->
+    <insert id="insertSelective" parameterType="com.yxb.mall.domain.vo.CProduct" >
+        insert into c_product
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="productName != null" >
+                product_name,
+            </if>
+            <if test="productPrice != null" >
+                product_price,
+            </if>
+            <if test="jingouTime != null" >
+                jingou_time,
+            </if>
+            <if test="jingouOperator != null" >
+                jingou_operator,
+            </if>
+            <if test="updateTime != null" >
+                update_time,
+            </if>
+            <if test="updateOperator != null" >
+                update_operator,
+            </if>
+            <if test="productNum != null" >
+                product_num,
+            </if>
+            <if test="catagory != null" >
+                catagory,
+            </if>
+            <if test="productTotalPrice != null" >
+                product_total_price
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="productName != null" >
+                #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productPrice != null" >
+                #{productPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="jingouTime != null" >
+                #{jingouTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="jingouOperator != null" >
+                #{jingouOperator,jdbcType=VARCHAR},
+            </if>
+            <if test="updateTime != null" >
+                #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateOperator != null" >
+                #{updateOperator,jdbcType=VARCHAR},
+            </if>
+            <if test="productNum != null" >
+                #{productNum,jdbcType=VARCHAR},
+            </if>
+            <if test="catagory != null" >
+                #{catagory,jdbcType=VARCHAR},
+            </if>
+            <if test="productTotalPrice != null" >
+                #{productTotalPrice,jdbcType=VARCHAR}
+            </if>
+        </trim>
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update contentmanagersystem_db.c_product
+        <set>
+            <if test="productName != null and productName != ''">
+                product_name = #{productName},
+            </if>
+            <if test="productPrice != null and productPrice != ''">
+                product_price = #{productPrice},
+            </if>
+            <if test="jingouTime != null">
+                jingou_time = #{jingouTime},
+            </if>
+            <if test="jingouOperator != null and jingouOperator != ''">
+                jingou_operator = #{jingouOperator},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="catagory != null">
+                and catagory = #{catagory}
+            </if>
+            <if test="updateOperator != null">
+                update_operator = #{updateOperator},
+            </if>
+            <if test="productNum != null">
+                product_num = #{productNum},
+            </if>
+            <if test="productTotalPrice != null">
+                product_total_price = #{productTotalPrice},
+            </if>
+        </set>
+        where product_id = #{productId}
+    </update>
+
+    <!--修改商品信息-->
+    <update id="updateByPrimaryKeySelective" parameterType="com.yxb.mall.domain.vo.CProduct" >
+        update c_product
+        <set>
+            <if test="productName != null and productName != ''">
+                product_name = #{productName},
+            </if>
+            <if test="productPrice != null and productPrice != ''">
+                product_price = #{productPrice},
+            </if>
+            <if test="jingouTime != null">
+                jingou_time = #{jingouTime},
+            </if>
+            <if test="jingouOperator != null and jingouOperator != ''">
+                jingou_operator = #{jingouOperator},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+            <if test="catagory != null">
+                and catagory = #{catagory}
+            </if>
+            <if test="updateOperator != null">
+                update_operator = #{updateOperator},
+            </if>
+            <if test="productNum != null">
+                product_num = #{productNum},
+            </if>
+            <if test="productTotalPrice != null">
+                product_total_price = #{productTotalPrice},
+            </if>
+        </set>
+        where product_id = #{productId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from contentmanagersystem_db.c_product where product_id = #{productId}
+    </delete>
+
+</mapper>

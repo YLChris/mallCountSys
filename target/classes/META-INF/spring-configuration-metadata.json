@@ -1,0 +1,146 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "name": "jdbc.mysql-master",
+      "type": "com.yxb.mall.architect.properties.JdbcProperties"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "name": "mybatis-common-druid-dataSource",
+      "type": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JedisProperties",
+      "name": "redis-pool",
+      "type": "com.yxb.mall.architect.properties.JedisProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "defaultValue": 0,
+      "name": "jdbc.mysql-master.initial-size",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "defaultValue": 0,
+      "name": "jdbc.mysql-master.max-active",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "defaultValue": 0,
+      "name": "jdbc.mysql-master.max-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "defaultValue": 0,
+      "name": "jdbc.mysql-master.max-wait",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "defaultValue": 0,
+      "name": "jdbc.mysql-master.min-idle",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "name": "jdbc.mysql-master.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "name": "jdbc.mysql-master.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "name": "jdbc.mysql-master.username",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.JdbcProperties",
+      "name": "jdbc.mysql-master.validation-query",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "name": "mybatis-common-druid-dataSource.config-location",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "name": "mybatis-common-druid-dataSource.filters",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": false,
+      "name": "mybatis-common-druid-dataSource.log-abandoned",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "name": "mybatis-common-druid-dataSource.mapper-location",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": 0,
+      "name": "mybatis-common-druid-dataSource.min-evictable-idle-time-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": false,
+      "name": "mybatis-common-druid-dataSource.pool-prepared-statements",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": false,
+      "name": "mybatis-common-druid-dataSource.remove-abandoned",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": 0,
+      "name": "mybatis-common-druid-dataSource.remove-abandoned-timeout",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": false,
+      "name": "mybatis-common-druid-dataSource.test-on-borrow",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": false,
+      "name": "mybatis-common-druid-dataSource.test-on-return",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": false,
+      "name": "mybatis-common-druid-dataSource.test-while-idle",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "defaultValue": 0,
+      "name": "mybatis-common-druid-dataSource.time-between-eviction-runs-millis",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.yxb.mall.architect.properties.AppCommonMyBatisProperties",
+      "name": "mybatis-common-druid-dataSource.type-aliases-package",
+      "type": "java.lang.String"
+    }
+  ]
+}
