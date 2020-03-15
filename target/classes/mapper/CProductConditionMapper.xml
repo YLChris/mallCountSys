@@ -122,17 +122,26 @@
         select
             product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
           from contentmanagersystem_db.c_product_condition
-          <where>
-              <if test="productName != null and productName != ''">
-                  and product_name = #{productName}
-              </if>
-              <if test="productPrice != null and productPrice != ''">
-                  and product_price = #{productPrice}
-              </if>
-              <if test="catagory != null and catagory != ''">
-                  and catagory = #{catagory}
-              </if>
-          </where>
+        <where>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'catagory' ">
+                AND catagory = #{searchContent}
+            </if>
+        </where>
+    </select>
+    <select id="selectCountCProductCondition" resultType="java.lang.Long">
+        select count(*)
+        from c_product_condition
+        <where>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'catagory' ">
+                AND catagory = #{searchContent}
+            </if>
+        </where>
     </select>
 
     <!--  &lt;!&ndash;查询单个&ndash;&gt;

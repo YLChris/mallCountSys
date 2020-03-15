@@ -1,228 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8638a90-8ee5-4a14-bd18-01aeb6985a8f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/contentManagerSystem_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/contentManagerSystem_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_httpclient_commons_httpclient_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_34.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ezmorph_ezmorph_1_0_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_json_lib_json_lib_jdk15_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jcl_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_8_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_jdbc_8_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_juli_8_5_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_2_6_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_core_compiler_ecj_4_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_3_5_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_19.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_nutz_nutz_1_b_51.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_1_5_3_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_2_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contentManagerSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/conf/beta/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/conf/beta/jdbc.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/annotation/SystemControllerLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/annotation/SystemControllerLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/annotation/SystemServiceLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/annotation/SystemServiceLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/conf/MyBatisDataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/conf/MyBatisDataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/conf/MyWebAppConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/conf/MyWebAppConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/conf/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/conf/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/conf/ShiroConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/conf/ShiroConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/conf/SystemLogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/conf/SystemLogAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/constant/BusinessConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BusinessConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/constant/BussinessCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/filter/MyWebFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/filter/MyWebFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/interceptor/CommonInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/interceptor/CommonInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/interceptor/ErrorInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/interceptor/ErrorInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/properties/AppCommonMyBatisProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/properties/AppCommonMyBatisProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/properties/JdbcProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/properties/JdbcProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/properties/JedisProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/properties/JedisProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/realm/ShiroDbRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/realm/ShiroDbRealm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/task/SystemScheduledTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/task/SystemScheduledTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/BussinessMsgUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/BussinessMsgUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/ClientIpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/ClientIpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/CommonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/CommonHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/CreateImageCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/CreateImageCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/HttpUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/KeyConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/KeyConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/MySSLProtocolSocketFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/MySSLProtocolSocketFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/ParseObjectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/ParseObjectUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/SpringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/SpringUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/utils/ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/ThreadPool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/architect/view/ExcelView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/view/ExcelView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/BasicController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/BasicController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/ManagerErrorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/ManagerErrorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/system/AnnouncementInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/AnnouncementInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/system/ResourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/ResourceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/system/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/system/SystemLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/SystemLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/AnnouncementInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/AnnouncementInfoMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/AnnouncementInfoUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/AnnouncementInfoUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/DataCleaningMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/DataCleaningMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/ResourceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/ResourceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/RoleResourceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/RoleResourceMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/SystemLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/SystemLogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/UserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/UserRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/bo/BussinessMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/bo/BussinessMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/bo/ExcelExport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/bo/ExcelExport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/bo/PermissionSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/bo/PermissionSubject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/bo/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/bo/Tree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/dto/DataCollectDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/DataCollectDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/dto/PageDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/PageDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/dto/ResourceChildrenMenuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/dto/ResourceMenuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceMenuDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/AnnouncementInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/AnnouncementInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/AnnouncementInfoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/AnnouncementInfoUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/DataCleaning.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/DataCleaning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/RoleResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/RoleResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/SystemLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/SystemLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/domain/vo/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/handler/RedisClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/handler/RedisClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/AnnouncementInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/AnnouncementInfoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/DataCleaningService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/DataCleaningService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/ResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/ResourceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/RoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/ShiroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/ShiroService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/SystemLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/SystemLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AnnouncementInfoMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AnnouncementInfoMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/AnnouncementInfoUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/AnnouncementInfoUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/DataCleaningMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/DataCleaningMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ResourceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ResourceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/RoleResourceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/RoleResourceMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SystemLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SystemLogMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/404.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/404.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/500.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/500.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/unauthorized.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/unauthorized.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_edit.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_grant.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_grant.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/js/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/js/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/layui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/layui.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/layui.mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/modules/code.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/modules/code.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/modules/laydate/default/laydate.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/modules/layer/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/css/modules/layer/default/layer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/font/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/element.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/element.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/flow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/flow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/laydate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/laydate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/layedit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/layedit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/layer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/laypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/laypage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/laytpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/laytpl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/lay/modules/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/layui.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/layui.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/layui_v2/layui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com.yxb.cms.test/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.yxb.cms.test/AppTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="c8638a90-8ee5-4a14-bd18-01aeb6985a8f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -337,11 +116,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="87" column="32" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="32" />
+            <state relative-caret-position="58">
+              <caret line="83" column="7" lean-forward="true" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -349,8 +128,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="134" column="67" lean-forward="true" selection-start-line="134" selection-start-column="67" selection-end-line="134" selection-end-column="67" />
+            <state relative-caret-position="175">
+              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
             </state>
           </provider>
         </entry>
@@ -373,11 +152,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1349">
-              <caret line="155" column="19" lean-forward="true" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
+            <state relative-caret-position="179">
+              <caret line="59" column="44" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -532,7 +311,7 @@
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="55" />
     <option name="y" value="2" />
     <option name="width" value="1316" />
@@ -778,7 +557,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584275111723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584282564972" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mallcountsys" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -837,18 +616,18 @@
       <workItem from="1584104439042" duration="8076000" />
       <workItem from="1584182587194" duration="29689000" />
       <workItem from="1584263956551" duration="64000" />
-      <workItem from="1584264096876" duration="9398000" />
+      <workItem from="1584264096876" duration="11441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91086000" />
+    <option name="totallyTimeSpent" value="93129000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="2" width="1316" height="773" extended-state="0" />
+    <frame x="55" y="2" width="1316" height="773" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21929824" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21929824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -859,7 +638,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.17165354" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3559055" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.21259843" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -891,6 +670,28 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="SpringBootApplicationConfigurationType">
         <watch expression="userRoleList" />
@@ -1201,13 +1002,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="134" column="67" lean-forward="true" selection-start-line="134" selection-start-column="67" selection-end-line="134" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CProductMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -1236,20 +1030,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="87" column="32" selection-start-line="87" selection-start-column="22" selection-end-line="87" selection-end-column="32" />
+        <state relative-caret-position="175">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1349">
-          <caret line="155" column="19" lean-forward="true" selection-start-line="155" selection-start-column="19" selection-end-line="155" selection-end-column="19" />
+        <state relative-caret-position="179">
+          <caret line="59" column="44" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="83" column="7" lean-forward="true" selection-start-line="83" selection-start-column="7" selection-end-line="83" selection-end-column="7" />
         </state>
       </provider>
     </entry>
