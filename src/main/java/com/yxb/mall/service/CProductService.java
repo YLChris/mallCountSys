@@ -7,6 +7,9 @@ import com.yxb.mall.dao.CProductMapper;
 import com.yxb.mall.domain.bo.BussinessMsg;
 import com.yxb.mall.domain.vo.CProduct;
 import com.yxb.mall.domain.vo.CProductCondition;
+import net.sf.json.JSON;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.nutz.json.Json;
@@ -14,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.*;
 
@@ -141,5 +145,106 @@ public class CProductService {
         map.put("data", cProductConditionsList);
 
         return Json.toJson(map);
+    }
+
+    /*获取产品种类以便前端进行销售*/
+    public String getGoodsPageList() {
+        //获取产品种类
+        Set<CProductCondition> cProductConditionsList = cProductConditionMapper.getGoodsPageList();
+        JSONArray allGoodsArray = new JSONArray();
+        allGoodsArray = getLastProduct(allGoodsArray,cProductConditionsList);
+
+        Map<String, Object> map = new HashMap<String, Object>();
+        map.put("code",0);
+        map.put("msg","");
+        map.put("data", allGoodsArray);
+
+        return Json.toJson(map);
+    }
+
+    //组装产品select
+    public JSONArray getLastProduct(JSONArray allGoodsArray,Set<CProductCondition> cProductConditionsList){
+        JSONArray fruitArray = new JSONArray();//水果
+        JSONArray clothArray = new JSONArray();//衣服
+        JSONArray foodArray = new JSONArray();//食品
+        JSONArray shucaiArray = new JSONArray();//蔬菜
+        Map<String,Object> fruitType = new HashMap<>();
+        Map<String,Object> clothType = new HashMap<>();
+        Map<String,Object> foodType = new HashMap<>();
+        Map<String,Object> shucaiType = new HashMap<>();
+        fruitType.put("name","水果");fruitType.put("type","optgroup");
+        clothType.put("name","衣服");clothType.put("type","optgroup");
+        foodType.put("name","食品");foodType.put("type","optgroup");
+        shucaiType.put("name","蔬菜");shucaiType.put("type","optgroup");
+        fruitArray.add(fruitType);
+        clothArray.add(clothType);
+        foodArray.add(foodType);
+        shucaiArray.add(shucaiType);
+        for(CProductCondition cProductCondition: cProductConditionsList){ //循环产品获取商品名和分类、价格
+            Map<String,Object> jsonObject = new HashMap<>();
+            String productName = cProductCondition.getProductName();
+            String catagoryFlag = cProductCondition.getCatagory();
+            String xiaoPrice = cProductCondition.getXiaoPrice();
+            switch (catagoryFlag){
+                case "1"://水果
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    fruitArray.add(jsonObject);
+                    break;
+                case "2"://衣服
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    clothArray.add(jsonObject);
+                    break;
+                case "3"://食品
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    foodArray.add(jsonObject);
+                    break;
+                case "4"://蔬菜
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    shucaiArray.add(jsonObject);
+                    break;
+            }
+        }
+
+        Iterator fruitIterator = fruitArray.iterator();
+        if(fruitIterator.hasNext()&&fruitArray.size()>1){
+            while (fruitIterator.hasNext()){
+                allGoodsArray.add(fruitIterator.next());
+            }
+        }else{
+            allGoodsArray.remove(fruitIterator.next());
+        }
+
+
+
+        Iterator clothIterator = clothArray.iterator();
+        if(clothIterator.hasNext()&&clothArray.size()>1){
+            while (clothIterator.hasNext()){
+                allGoodsArray.add(clothIterator.next());
+            }
+        }else{
+            allGoodsArray.remove(clothIterator.next());
+        }
+
+
+        Iterator foodIterator = foodArray.iterator();
+        if(foodIterator.hasNext()&&foodArray.size()>1){
+            while (foodIterator.hasNext()){
+                allGoodsArray.add(foodIterator.next());
+            }
+        }else{
+            allGoodsArray.remove(foodIterator.next());
+        }
+
+
+        Iterator shucaiIterator = shucaiArray.iterator();
+        if(shucaiIterator.hasNext()&&shucaiArray.size()>1){
+            while (shucaiIterator.hasNext()){
+                allGoodsArray.add(shucaiIterator.next());
+            }
+        }else{
+            allGoodsArray.remove(shucaiIterator.next());
+        }
+
+        return allGoodsArray;
     }
 }

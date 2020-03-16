@@ -76,6 +76,7 @@
             </if>
         </where>
         order by jingou_time DESC
+        LIMIT #{start},#{limit}
     </select>
     <!-- 验证角色名称唯一性 -->
     <select id="selectProductNameCheck" resultType="java.lang.Long">

@@ -31,7 +31,6 @@
                             <input type="text" name="searchContent" value="" placeholder="请输入关键字" class="layui-input search_input">
                         </div>
                         <a class="layui-btn goodsConditionSearchList_btn" lay-submit lay-filter="goodsConditionSearchFilter"><i class="layui-icon larry-icon larry-chaxun7"></i>查询</a>
-                        <a class="layui-btn layui-btn-normal  goodAdd_btn"> <i class="layui-icon larry-icon larry-xinzeng1"></i>新增商品</a>
                     </form>
                 </div>
             </blockquote>

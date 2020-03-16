@@ -1,5 +1,6 @@
 package com.yxb.mall.domain.vo;
 
+import com.yxb.mall.domain.dto.PageDto;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.Date;
@@ -11,7 +12,7 @@ import java.io.Serializable;
  * @author makejava
  * @since 2020-03-13 00:28:43
  */
-public class CProduct implements Serializable {
+public class CProduct extends PageDto implements Serializable {
     private static final long serialVersionUID = -63201626535126031L;
     /**
     * 商品ID

@@ -85,9 +85,20 @@ public class CProductController extends BasicController{
      * 加载商品库存列表List
      * @return
      */
-    @RequestMapping("/goodsKuCun.do")
+    @PostMapping("/goodsKuCun.do")
     @ResponseBody
     public String ajaxGoodsKuCunList(CProductCondition cProductCondition){
         return cProductService.selectGoodsKuCunResultPageList(cProductCondition);
+    }
+
+
+    /**
+     * 获取商品
+     * @return
+     */
+    @GetMapping("/getGoods.do")
+    @ResponseBody
+    public String ajaxgetGoods(){
+        return cProductService.getGoodsPageList();
     }
 }

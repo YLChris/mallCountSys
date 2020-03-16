@@ -1,5 +1,6 @@
 package com.yxb.mall.domain.vo;
 
+import com.yxb.mall.domain.dto.PageDto;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
@@ -11,7 +12,7 @@ import java.io.Serializable;
  * @since 2020-03-15 14:31:07
  */
 @Service
-public class CProductCondition implements Serializable {
+public class CProductCondition extends PageDto implements Serializable {
     private static final long serialVersionUID = -57267664864795597L;
     
     private String productName;

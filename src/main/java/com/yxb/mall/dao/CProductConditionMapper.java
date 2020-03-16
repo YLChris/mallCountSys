@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * (CProductCondition)表数据库访问层
@@ -28,4 +29,7 @@ public interface CProductConditionMapper {
 
     //查询某商品库存 利润等信息数量
     Long selectCountCProductCondition(CProductCondition cProductCondition);
+
+    //获取产品种类
+    Set<CProductCondition> getGoodsPageList();
 }

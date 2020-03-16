@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2020-03-15 21:26:25
+Date: 2020-03-17 01:00:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -62,12 +62,14 @@ CREATE TABLE `cc_data_cleaning` (
   `data_count` int(11) DEFAULT NULL COMMENT '数量',
   PRIMARY KEY (`data_id`),
   UNIQUE KEY `unique_data_type_time` (`data_type`,`data_time`) COMMENT '数据类型、日期唯一建索引'
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cc_data_cleaning
 -- ----------------------------
 INSERT INTO `cc_data_cleaning` VALUES ('1', '1', '2020-03-12', '1');
+INSERT INTO `cc_data_cleaning` VALUES ('3', '1', '2020-03-14', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('4', '1', '2020-03-15', '1');
 
 -- ----------------------------
 -- Table structure for cc_resource
@@ -240,12 +242,13 @@ CREATE TABLE `cc_sys_log` (
   `log_start_time` datetime DEFAULT NULL COMMENT '请求开始时间',
   `log_elapsed_time` bigint(20) DEFAULT NULL COMMENT '请求耗时',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cc_sys_log
 -- ----------------------------
 INSERT INTO `cc_sys_log` VALUES ('1', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"skpiu\",\"username\":\"admin\"}', null, 'admin', '0:0:0:0:0:0:0:1', null, '2020-03-12 20:23:45', '58');
+INSERT INTO `cc_sys_log` VALUES ('2', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"c9t69\",\"username\":\"711027\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-15 22:26:56', '39');
 
 -- ----------------------------
 -- Table structure for cc_user
@@ -310,7 +313,7 @@ CREATE TABLE `c_product` (
   `product_num` int(255) NOT NULL,
   `product_total_price` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of c_product
@@ -325,6 +328,9 @@ INSERT INTO `c_product` VALUES ('25', '三只松鼠', '10', '2020-03-15 18:42:09
 INSERT INTO `c_product` VALUES ('26', '三只松鼠', '10', '2020-03-15 18:45:58', '711027', null, null, '3', '20', '200');
 INSERT INTO `c_product` VALUES ('27', '张小妹方便面', '20', '2020-03-15 18:46:31', '711027', null, null, '3', '20', '400');
 INSERT INTO `c_product` VALUES ('28', '张小妹方便面', '20', '2020-03-15 19:36:10', '711027', null, null, '3', '20', '400');
+INSERT INTO `c_product` VALUES ('31', '聚美优品', '100', '2020-03-16 19:46:39', '711027', null, null, '2', '10', '1000');
+INSERT INTO `c_product` VALUES ('32', '榴莲', '50', '2020-03-17 00:47:51', '711027', null, null, '1', '30', '1500');
+INSERT INTO `c_product` VALUES ('33', '胡萝卜', '10', '2020-03-17 00:48:22', '711027', null, null, '4', '10', '100');
 
 -- ----------------------------
 -- Table structure for c_product_condition
@@ -335,15 +341,18 @@ CREATE TABLE `c_product_condition` (
   `product_price` varchar(255) DEFAULT NULL COMMENT '产品进购价',
   `catagory` varchar(255) DEFAULT NULL,
   `ku_cun_liang` int(255) DEFAULT NULL COMMENT '库存量',
-  `xiao_liang` int(255) DEFAULT NULL COMMENT '销量',
-  `xiao_price` varchar(255) DEFAULT NULL COMMENT '销售价格',
-  `xiao_total_price` varchar(255) DEFAULT NULL COMMENT '该产品的销售总额',
-  `li_run` varchar(255) DEFAULT NULL COMMENT '净利润',
+  `xiao_liang` int(255) DEFAULT '0' COMMENT '销量',
+  `xiao_price` varchar(255) DEFAULT '0' COMMENT '销售价格',
+  `xiao_total_price` varchar(255) DEFAULT '0' COMMENT '该产品的销售总额',
+  `li_run` varchar(255) DEFAULT '0' COMMENT '净利润',
   `jingou_num` int(255) DEFAULT NULL COMMENT '进购产品总数量'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of c_product_condition
 -- ----------------------------
-INSERT INTO `c_product_condition` VALUES ('三只松鼠', '10', '3', '340', null, null, null, null, '340');
-INSERT INTO `c_product_condition` VALUES ('张小妹方便面', '20', '3', '40', null, null, null, null, '40');
+INSERT INTO `c_product_condition` VALUES ('三只松鼠', '10', '3', '340', '0', '0', '0', '0', '340');
+INSERT INTO `c_product_condition` VALUES ('张小妹方便面', '20', '3', '40', '0', '0', '0', '0', '40');
+INSERT INTO `c_product_condition` VALUES ('聚美优品', '100', '2', '10', '0', '0', '0', '0', '10');
+INSERT INTO `c_product_condition` VALUES ('榴莲', '50', '1', '30', '0', '0', '0', '0', '30');
+INSERT INTO `c_product_condition` VALUES ('胡萝卜', '10', '4', '10', '0', '0', '0', '0', '10');
