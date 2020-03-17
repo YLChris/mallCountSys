@@ -187,19 +187,19 @@ public class CProductService {
             String xiaoPrice = cProductCondition.getXiaoPrice();
             switch (catagoryFlag){
                 case "1"://水果
-                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+"-"+xiaoPrice);
                     fruitArray.add(jsonObject);
                     break;
                 case "2"://衣服
-                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+"-"+xiaoPrice);
                     clothArray.add(jsonObject);
                     break;
                 case "3"://食品
-                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+"-"+xiaoPrice);
                     foodArray.add(jsonObject);
                     break;
                 case "4"://蔬菜
-                    jsonObject.put("name",productName);jsonObject.put("value",productName+xiaoPrice);
+                    jsonObject.put("name",productName);jsonObject.put("value",productName+"-"+xiaoPrice);
                     shucaiArray.add(jsonObject);
                     break;
             }
