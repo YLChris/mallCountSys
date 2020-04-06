@@ -2,8 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8638a90-8ee5-4a14-bd18-01aeb6985a8f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e804e12a-7b9e-4d25-bd5e-885e54f06479.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/e804e12a-7b9e-4d25-bd5e-885e54f06479.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/GoodsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/GoodsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductConditionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductConditionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProductCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProductCondition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CProductConditionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CProductConditionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/CProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsInfo.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsInfo.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goods_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goods_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/liRunXinxi.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/shouruZhichu.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com.yxb.cms.test/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com.yxb.cms.test/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/architect/constant/BussinessCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/architect/constant/BussinessCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/controller/CProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/controller/CProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/controller/system/GoodsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/controller/system/GoodsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/controller/system/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/controller/system/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/dao/CProductConditionMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/dao/CProductConditionMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/dao/CProductMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/dao/CProductMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/domain/vo/CProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/domain/vo/CProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/domain/vo/CProductCondition.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/domain/vo/CProductCondition.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/yxb/mall/service/CProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/yxb/mall/service/CProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CProductConditionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CProductConditionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/CProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/CProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/yxb/mall/test/AppTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +75,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="contentmanagersystem_db: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="contentmanagersystem_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="contentmanagersystem_db: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="c_selltime_product: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -52,59 +95,63 @@
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
           <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.29" value="2" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.79" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.open.time.85" value="1" />
+          <entry key="project.opened" value="18" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="6" />
+          <entry key="class" value="12" />
           <entry key="css" value="4" />
-          <entry key="java" value="205" />
-          <entry key="js" value="16" />
-          <entry key="jsp" value="72" />
+          <entry key="java" value="296" />
+          <entry key="js" value="19" />
+          <entry key="jsp" value="128" />
           <entry key="properties" value="8" />
-          <entry key="sql" value="1" />
-          <entry key="xml" value="37" />
+          <entry key="sql" value="2" />
+          <entry key="xml" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="6" />
+          <entry key="CLASS" value="12" />
           <entry key="CSS" value="4" />
-          <entry key="JAVA" value="205" />
-          <entry key="JSP" value="72" />
-          <entry key="JavaScript" value="16" />
+          <entry key="JAVA" value="296" />
+          <entry key="JSP" value="128" />
+          <entry key="JavaScript" value="19" />
           <entry key="Properties" value="8" />
+          <entry key="SQL" value="1" />
           <entry key="Scratch" value="1" />
-          <entry key="XML" value="37" />
+          <entry key="XML" value="53" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="12" />
-          <entry key="java" value="4685" />
+          <entry key="java" value="9322" />
           <entry key="js" value="17" />
-          <entry key="jsp" value="3202" />
+          <entry key="jsp" value="7099" />
           <entry key="properties" value="18" />
           <entry key="txt" value="23" />
-          <entry key="xml" value="658" />
+          <entry key="xml" value="1298" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="6" />
-          <entry key="JAVA" value="4685" />
-          <entry key="JSP" value="3196" />
+          <entry key="JAVA" value="9322" />
+          <entry key="JSP" value="7093" />
           <entry key="JavaScript" value="17" />
           <entry key="PLAIN_TEXT" value="35" />
           <entry key="Properties" value="18" />
-          <entry key="SQL" value="84" />
-          <entry key="XML" value="574" />
+          <entry key="SQL" value="118" />
+          <entry key="XML" value="1180" />
         </counts>
       </usages-collector>
     </session>
@@ -118,29 +165,25 @@
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="contentManagerSystem" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="99" column="17" lean-forward="true" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
-              <folding>
-                <element signature="e#2643#2644#0" expanded="true" />
-                <element signature="e#2731#2732#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="4680">
+              <caret line="206" column="48" selection-start-line="206" selection-start-column="48" selection-end-line="206" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="187" column="34" lean-forward="true" selection-start-line="187" selection-start-column="34" selection-end-line="187" selection-end-column="34" />
-              <folding>
-                <element signature="e#5525#5541#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="320">
+              <caret line="452" column="24" lean-forward="true" selection-start-line="452" selection-start-column="24" selection-end-line="452" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -148,8 +191,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductConditionMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="1222">
+              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -157,21 +200,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CProductConditionMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="63">
-              <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+            <state relative-caret-position="7410">
+              <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/liRunXinxi.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="83" column="138" selection-start-line="83" selection-start-column="138" selection-end-line="83" selection-end-column="138" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="5304">
+              <caret line="204" column="40" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -181,43 +220,43 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ajax_role_list</find>
-      <find>saveRole</find>
-      <find>roleAdd_btn</find>
-      <find>角</find>
-      <find>goodAdd_btn</find>
-      <find>good_edit</find>
-      <find>id=&quot;pageFlag</find>
-      <find>resTypeVal</find>
-      <find>pageFlag</find>
-      <find>roleId</find>
-      <find>role</find>
-      <find>ajax_save_role</find>
-      <find>角色</find>
-      <find>insertSelective</find>
-      <find>updateByPrimaryKeySelective</find>
-      <find>ajax_save_goods</find>
-      <find>checkRoleName</find>
-      <find>productPrice</find>
-      <find>cancle</find>
-      <find>goodTableList</find>
-      <find>goodTableId</find>
-      <find>goodsSearchList_btn</find>
-      <find>goodsSearchFilter</find>
+      <find>ResourceMenuDto</find>
+      <find>role_add</find>
+      <find>ajax_role_batch_fail</find>
+      <find>contentmanagersystem_db.</find>
+      <find>updateCproductConditionByProductId</find>
+      <find>RoleService</find>
+      <find>保存商品开始</find>
+      <find>productDesc</find>
+      <find>saveOrUpdateCProductCondition</find>
+      <find>updateCproductCondition</find>
+      <find>已上架</find>
       <find>goodConditionTableList</find>
-      <find>Transactional</find>
+      <find>goodConditionTableId</find>
+      <find>chushouRecord</find>
+      <find>getSellProductRecord</find>
+      <find>goodsRecordInfo</find>
       <find>ajax_goods_list</find>
-      <find>selectProductNameCheck</find>
-      <find>水果</find>
-      <find>getGoods</find>
-      <find>chushouFilter</find>
+      <find>导出</find>
+      <find>danye</find>
+      <find>excel_users_export</find>
+      <find>selectUsersList</find>
+      <find>userSearchForm</find>
+      <find>该类商品进购总数</find>
+      <find>roleSearchForm</find>
+      <find>excelUserExport_btn</find>
+      <find>excel_sellProudctReport_export</find>
+      <find>selectGoodsKuCunResultPageList</find>
+      <find>goodsKuCun</find>
+      <find>liRundata</find>
+      <find>queryCproductConditionByCProduct</find>
     </findStrings>
     <replaceStrings>
       <replace>good_edit</replace>
@@ -237,6 +276,8 @@
       <replace>goodConditionTableId</replace>
       <replace>goodsConditionSearchList_btn</replace>
       <replace>goodsConditionSearchFilter</replace>
+      <replace>goodRecordTableList</replace>
+      <replace>goodRecordTableId</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -245,19 +286,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsXiaoLiang.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/DataCleaningMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/SystemLogMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/AnnouncementInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/AnnouncementInfoUserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/DataCleaningService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/RoleService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/RoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/UserRoleMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/RoleResourceMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/ShiroService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/SystemLogService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/dao/CProductMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/cms/service/CProductService.java" />
@@ -267,7 +295,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_edit.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/ResourceService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_edit.jsp" />
@@ -278,24 +305,38 @@
         <option value="$PROJECT_DIR$/src/main/webapp/static/js/common.js" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/RoleController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/annotation/SystemControllerLog.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goods_edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/c.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductConditionService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsJinGou.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_list.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goods_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChuShou_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/RoleController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com.yxb.cms.test/AppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProduct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProductCondition.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsInfo.jsp" />
+        <option value="$PROJECT_DIR$/src/test/java/com.yxb.cms.test/tst.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/liRunEcharts.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/GoodsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CSelltimeProduct.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsInfoRecord.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CProductMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductConditionMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CProductConditionMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/liRunXinxi.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp" />
       </list>
     </option>
   </component>
@@ -319,6 +360,12 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="MavenRunner">
     <option name="jreName" value="1.8" />
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
@@ -329,6 +376,23 @@
     <option name="width" value="1582" />
     <option name="height" value="983" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Ali-Check</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AlibabaAvoidCommentBehindStatement</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -336,235 +400,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="conf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="architect" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="architect" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="SystemControllerLog" type="1a9f42e2:ClassTreeNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mall" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="comm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="error" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contentManagerSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="contentManagerSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
@@ -579,7 +415,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584464586750" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1585579253121" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mallcountsys" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -619,7 +455,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yxb.mall.Application" />
+      <module name="contentManagerSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yxb.mall.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="tst" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.yxb.cms.test.tst" />
+      <module name="contentManagerSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yxb.cms.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="contentManagerSystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yxb.cms.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yxb.cms.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yxb.cms.test.AppTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="contentManagerSystem" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yxb.mall.Application" />
@@ -627,6 +505,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="JUnit.AppTest.test" />
+      <item itemvalue="Application.tst" />
+      <item itemvalue="Application.Application" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.tst" />
+        <item itemvalue="JUnit.AppTest.test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -652,18 +543,63 @@
       <workItem from="1584104439042" duration="8076000" />
       <workItem from="1584182587194" duration="29689000" />
       <workItem from="1584263956551" duration="64000" />
-      <workItem from="1584264096876" duration="40152000" />
+      <workItem from="1584264096876" duration="64718000" />
+      <workItem from="1584766081938" duration="43163000" />
+      <workItem from="1585405929560" duration="15160000" />
+      <workItem from="1585749349700" duration="23461000" />
+      <workItem from="1586146788057" duration="299000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="AppTest_test - 2020.03.22 at 13h 40m 59s.xml">
+      <configuration name="AppTest.test" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121840000" />
+    <option name="totallyTimeSpent" value="228489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21929824" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21462639" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" weight="0.3298887" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4133127" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.40557274" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32817337" />
+      <window_info anchor="bottom" id="MyBatis Log" order="11" weight="0.32913387" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24960254" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.3298887" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3290938" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="RestServices" order="10" side_tool="true" weight="0.3293461" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.21860096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -674,14 +610,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32972136" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.17165354" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.45510834" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.26625386" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32913387" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32817337" />
       <window_info anchor="bottom" id="MyBatis Log" order="11" weight="0.32913387" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -697,7 +633,7 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
       <window_info anchor="right" id="RestServices" order="10" side_tool="true" weight="0.3293461" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -714,369 +650,342 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/comm/mytags.jsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="19" column="62" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="62" />
+        <state relative-caret-position="338">
+          <caret line="181" selection-start-line="181" selection-end-line="181" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/index.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChuShou_edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="57" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="57" />
+        <state relative-caret-position="130">
+          <caret line="98" column="34" lean-forward="true" selection-start-line="98" selection-start-column="34" selection-end-line="98" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/bodyTab.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/DataCollectDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="132">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceChildrenMenuDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="149" column="49" selection-start-line="149" selection-start-column="39" selection-end-line="149" selection-end-column="49" />
+        <state relative-caret-position="76">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/unauthorized.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/ResourceMenuDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4783">
-          <caret line="186" column="25" selection-start-line="186" selection-start-column="25" selection-end-line="186" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/500.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4757">
-          <caret line="185" column="25" selection-start-line="185" selection-start-column="25" selection-end-line="185" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/error/404.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4835">
-          <caret line="188" column="25" selection-start-line="188" selection-start-column="25" selection-end-line="188" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="81" column="31" selection-start-line="81" selection-start-column="31" selection-end-line="81" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/ResourceController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2730">
-          <caret line="157" column="43" selection-start-line="157" selection-start-column="43" selection-end-line="157" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/Resource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2548">
-          <caret line="132" column="35" selection-start-line="132" selection-start-column="20" selection-end-line="132" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/RoleResourceMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2236">
-          <caret line="122" column="23" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RoleResourceMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="173" column="21" selection-start-line="173" selection-start-column="21" selection-end-line="173" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.8.RELEASE/spring-web-4.3.8.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="117" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
+        <state relative-caret-position="232">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2984">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_172/src.zip!/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="51" column="19" selection-start-line="51" selection-start-column="19" selection-end-line="51" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_list.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="212" column="50" selection-start-line="212" selection-start-column="40" selection-end-line="212" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="92" column="14" lean-forward="true" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="26" column="14" lean-forward="true" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="73" column="50" lean-forward="true" selection-start-line="73" selection-start-column="50" selection-end-line="73" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/annotation/SystemControllerLog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/res_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="125" column="92" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goods_edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="992">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/impl/CProductConditionServiceImpl.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.8.RELEASE/spring-context-4.3.8.RELEASE.jar!/org/springframework/stereotype/Service.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductConditionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/ResourceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="112" column="30" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsJinGou.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="49" />
+        <state relative-caret-position="-44">
+          <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="16" selection-end-line="155" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/RoleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+        <state relative-caret-position="182">
+          <caret line="166" column="42" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com.yxb.cms.test/AppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/RoleService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="97" column="52" selection-start-line="97" selection-start-column="52" selection-end-line="97" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/RoleMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="115" column="15" selection-start-line="115" selection-start-column="15" selection-end-line="115" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/dto/PageDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="48" column="33" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="33" />
+        <state relative-caret-position="184">
+          <caret line="97" column="27" selection-start-line="97" selection-start-column="27" selection-end-line="97" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProduct.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="121">
+          <caret line="39" column="28" lean-forward="true" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/conf/SystemLogAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="228" selection-start-line="228" selection-end-line="228" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goods_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com.yxb.cms.test/tst.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding>
-            <element signature="e#1310#1311#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-          </folding>
+          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/RoleMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="203" column="13" selection-start-line="203" selection-start-column="13" selection-end-line="203" selection-end-column="13" />
+        <state relative-caret-position="253">
+          <caret line="147" column="17" lean-forward="true" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/AnnouncementInfoController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="83" column="31" selection-start-line="83" selection-start-column="9" selection-end-line="83" selection-end-column="31" />
+        <state relative-caret-position="260">
+          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CProductMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/SystemLogController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="78" column="8" selection-start-line="78" selection-start-column="8" selection-end-line="78" selection-end-column="31" />
+        <state relative-caret-position="260">
+          <caret line="54" column="24" lean-forward="true" selection-start-line="54" selection-start-column="24" selection-end-line="54" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/BasicController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="35" column="23" lean-forward="true" selection-end-line="163" selection-end-column="7" />
+        <state relative-caret-position="468">
+          <caret line="55" column="7" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CProductConditionMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/DataCleaningMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="165" column="17" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+        <state relative-caret-position="260">
+          <caret line="45" column="15" selection-start-line="45" selection-start-column="15" selection-end-line="45" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductConditionMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/IndexController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="104">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CProductCondition.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="91" column="18" selection-start-line="91" selection-start-column="18" selection-end-line="91" selection-end-column="18" />
-          <folding>
-            <element signature="e#1720#1721#0" expanded="true" />
-            <element signature="e#1751#1752#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="239">
+          <caret line="54" column="7" lean-forward="true" selection-start-line="54" selection-start-column="7" selection-end-line="54" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/liRunEcharts.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/shopShouRu.jsp" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/shouruZhichu.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1803">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/main/loginProxy.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="76" column="25" lean-forward="true" selection-start-line="76" selection-start-column="25" selection-end-line="76" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.8.RELEASE/spring-aop-4.3.8.RELEASE.jar!/org/springframework/aop/framework/CglibAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="509" selection-start-line="509" selection-end-line="509" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CSelltimeProductDao.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/GoodsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="82" column="14" lean-forward="true" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/utils/BussinessMsgUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/architect/constant/BussinessCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1378">
+          <caret line="84" column="48" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/static/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/domain/vo/CSelltimeProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.8.RELEASE/spring-core-4.3.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="104" selection-start-line="104" selection-end-line="104" />
+          <caret line="105" selection-start-line="105" selection-end-line="105" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Java/jdk1.8.0_172/src.zip!/java/util/Iterator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsJinGou.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
+        <state relative-caret-position="208">
+          <caret line="59" column="49" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsInfo.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="59" column="44" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contentmanagersystem_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="107" column="77" selection-start-line="107" selection-start-column="77" selection-end-line="107" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/system/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="93" column="52" lean-forward="true" selection-start-line="93" selection-start-column="52" selection-end-line="93" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="156" column="24" lean-forward="true" selection-start-line="149" selection-start-column="7" selection-end-line="156" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/role_edit.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="71" selection-start-line="20" selection-start-column="71" selection-end-line="20" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CProductMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="158" column="15" lean-forward="true" selection-start-line="158" selection-start-column="15" selection-end-line="158" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/user_list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="26" column="63" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsInfoRecord.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="61" column="49" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsKuCun.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="78" column="29" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/controller/CProductController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="99" column="17" lean-forward="true" selection-start-line="99" selection-start-column="17" selection-end-line="99" selection-end-column="17" />
-          <folding>
-            <element signature="e#2643#2644#0" expanded="true" />
-            <element signature="e#2731#2732#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="4680">
+          <caret line="206" column="48" selection-start-line="206" selection-start-column="48" selection-end-line="206" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/dao/CProductConditionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1222">
+          <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/CProductConditionMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7410">
+          <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/liRunXinxi.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5304">
+          <caret line="204" column="40" selection-start-line="204" selection-start-column="31" selection-end-line="204" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/yxb/mall/service/CProductService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="187" column="34" lean-forward="true" selection-start-line="187" selection-start-column="34" selection-end-line="187" selection-end-column="34" />
-          <folding>
-            <element signature="e#5525#5541#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/system/goodsChushou.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="83" column="138" selection-start-line="83" selection-start-column="138" selection-end-line="83" selection-end-column="138" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="320">
+          <caret line="452" column="24" lean-forward="true" selection-start-line="452" selection-start-column="24" selection-end-line="452" selection-end-column="24" />
         </state>
       </provider>
     </entry>

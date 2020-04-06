@@ -41,6 +41,8 @@ public class CProduct extends PageDto implements Serializable {
 
     private String productTotalPrice;//商品进购数量乘以单价
 
+    private String productDesc;//商品描述
+
     /**
      * 查询项
      */
@@ -50,6 +52,13 @@ public class CProduct extends PageDto implements Serializable {
      */
     private String searchContent;
 
+    public String getProductDesc() {
+        return productDesc;
+    }
+
+    public void setProductDesc(String productDesc) {
+        this.productDesc = productDesc;
+    }
 
     public String getProductTotalPrice() {
         return String.valueOf(Integer.parseInt(this.productPrice)*this.productNum);

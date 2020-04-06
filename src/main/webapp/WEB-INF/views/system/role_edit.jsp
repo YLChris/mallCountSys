@@ -18,7 +18,7 @@
 </head>
 <body class="childrenBody" style="font-size: 12px;margin: 10px 10px 0;">
 <form class="layui-form layui-form-pane">
-    <input id="roleId" name="roleId" type="hidden" value="${role.productPrice}">
+    <input id="roleId" name="roleId" type="hidden" value="${role.roleId}">
 
     <div class="layui-form-item">
         <label class="layui-form-label">角色名称</label>

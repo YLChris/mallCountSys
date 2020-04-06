@@ -80,8 +80,10 @@ public enum BussinessCode {
     ANNOUNCEMENT_DEL_ERROR("1510","删除公告失败,程序异常"),
     ANNOUNCEMENT_USER_INSERT_ERROR("1511","标记为已读失败,程序异常"),
 	PRODUCT_NAME_EXIST("1511","商品名称已存在，请重新输入"),
-	PRODUCT_SAVE_ERROR("1512","商品信息保存失败")
-
+	PRODUCT_SAVE_ERROR("1512","商品信息保存失败"),
+	PRODUCTPRICE_ERROR("1513","出售价格不能低于进购价格"),
+	PRODUCTKUCUNBUZU_ERROR("1514","库存不足，请及时进货"),
+	PRODUCTRECORD_ERROR("1515","商品出售记录不存在")
 
     ;
 

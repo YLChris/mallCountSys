@@ -2,17 +2,16 @@ package com.yxb.mall.dao;
 
 import com.yxb.mall.domain.vo.CProduct;
 import com.yxb.mall.domain.vo.CProductCondition;
+import com.yxb.mall.domain.vo.CSelltimeProduct;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * (CProduct)表数据库访问层
- *
- * @author makejava
- * @since 2020-03-13 00:29:40
  */
 @Service
 @Mapper
@@ -72,7 +71,7 @@ public interface CProductMapper {
      * 进购商品信息分页列表显示
      * @return
      */
-    List<CProduct> selectGoodsListByPage(CProduct cProduct);
+    List<CProduct> selectGoodsListByPage(@Param("cProduct") CProduct cProduct,@Param("start") int start,@Param("end") int end);
 
     /**
      * 查询商品总记录数
@@ -92,4 +91,12 @@ public interface CProductMapper {
 
     /*获取库存、利润等信息*/
     CProduct getKuCunLiang(@Param("productName") String productName,@Param("catagory") String catagory,@Param("productPrice") String productPrice);
+
+    /*获取商品出售记录*/
+    List<CSelltimeProduct> goodsRecordInfo(@Param("cSelltimeProduct") CSelltimeProduct cSelltimeProduct,@Param("start") int start,@Param("end") int end);
+
+    /*获取商品出售记录数量*/
+    Map<String,String> goodsRecordInfoCount(@Param("cSelltimeProduct") CSelltimeProduct cSelltimeProduct);
+
+    List<CSelltimeProduct> goodsRecordInfo1(@Param("cSelltimeProduct")CSelltimeProduct cSelltimeProduct);
 }

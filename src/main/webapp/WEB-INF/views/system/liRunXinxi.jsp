@@ -17,51 +17,13 @@
     <link rel="stylesheet" type="text/css" href="${ctx}/static/css/personal.css" media="all">
     <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_9h680jcse4620529.css">
     <script src="${ctx}/static/layui_v2/layui.js"></script>
-
+    <script src="${ctx}/static/echarts/echarts.min.js"></script>
 
 <body>
 <div class="larry-grid layui-anim layui-anim-upbit larryTheme-A">
-    <div class="larry-personal">
-        <div class="layui-tab">
-            <blockquote class="layui-elem-quote mylog-info-tit">
-                <div class="layui-inline">
-                    <form class="layui-form" id="roleSearchForm">
-                        <div class="layui-input-inline" style="width:110px;">
-                            <select name="searchTerm" >
-                                <option value="roleNameTerm">角色名称</option>
-                            </select>
-                        </div>
-                        <div class="layui-input-inline" style="width:145px;">
-                            <input type="text" name="searchContent" value="" placeholder="请输入关键字" class="layui-input search_input">
-                        </div>
-                        <a class="layui-btn roleSearchList_btn" lay-submit lay-filter="roleSearchFilter"><i class="layui-icon larry-icon larry-chaxun7"></i>查询</a>
-                    </form>
-                </div>
-                <shiro:hasPermission name="nxRVZA5i">
-                    <div class="layui-inline">
-                        <a class="layui-btn layui-btn-normal  roleAdd_btn"> <i class="layui-icon larry-icon larry-xinzeng1"></i>新增角色</a>
-                    </div>
-                </shiro:hasPermission>
-                <shiro:hasPermission name="oCNcsKmk">
-                    <div class="layui-inline">
-                        <a class="layui-btn layui-btn-normal excelRoleExport_btn"  style="background-color:#5FB878"> <i class="layui-icon larry-icon larry-danye"></i>导出</a>
-                    </div>
-                </shiro:hasPermission>
-                <shiro:hasPermission name="qsieHTy4">
-                    <div class="layui-inline">
-                        <a class="layui-btn layui-btn-danger roleBatchFail_btn"><i class="layui-icon larry-icon larry-shanchu"></i>批量失效</a>
-                    </div>
-                </shiro:hasPermission>
-
-            </blockquote>
-            <div class="larry-separate"></div>
-            <!-- 角色列表 -->
-            <div class="layui-tab-item  layui-show" style="padding: 10px 15px;">
-                <table id="roleTableList" lay-filter="roleTableId"></table>
-            </div>
-
-        </div>
-    </div>
+    <div id="main" style="width: 100%;height:500px;margin-bottom: 10px;"></div>
+    <div id="main2" style="width: 100%;height:500px;margin-bottom: 10px;"></div>
+    <div id="main3" style="width: 100%;height:500px;margin-bottom: 10px;"></div>
 </div>
 <script type="text/javascript">
     layui.config({
@@ -73,179 +35,189 @@
             layer = layui.layer,
             common = layui.common;
 
-        var loading = layer.load(0,{ shade: [0.3,'#000']});
+        // ========================111=======================
 
-        /**角色表格加载*/
-        table.render({
-            elem: '#roleTableList',
-            url: '${ctx}/role/ajax_role_list.do',
-            id:'roleTableId',
-            method: 'post',
-            height:'full-140',
-            skin:'row',
-            even:'true',
-            size: 'sm',
-            cols: [[
-                {type:"numbers"},
-                {type:"checkbox"},
-                {field:'roleName', title: '角色名称',align:'center' },
-                {field:'roleStatus', title: '角色状态',align:'center',width: '6%',templet: '#roleStatusTpl'},
-                {field:'resourceNames', title: '菜单资源',align:'center'},
-                {field:'roleRemark', title: '角色说明',align:'center'},
-                {field:'creator', title: '创建人',align:'center'},
-                {field:'createTime', title: '创建时间',align:'center',width: '12%'},
-                {field:'modifier', title: '修改人',align:'center'},
-                {field:'modifierTime', title: '修改时间',align:'center',width: '12%'},
-                {title: '操作', align:'center', width: '17%',toolbar: '#roleBar'}
-
-            ]],
-            page: true,
-            done: function (res, curr, count) {
-                common.resizeGrid();
-                layer.close(loading);
-
-            }
+        var myChart = echarts.init(document.getElementById('main'));
+        // 显示标题，图例和空的坐标轴
+        myChart.setOption({
+            title: {
+                text: '商品利润柱状图'
+            },
+            tooltip: {},
+            legend: {
+                data:['商品']
+            },
+            xAxis: {
+                data: []
+            },
+            yAxis: {},
+            series: [{
+                name: '利润',
+                type: 'bar',
+                data: []
+            }]
         });
 
-        /**查询*/
-        $(".roleSearchList_btn").click(function(){
-            var loading = layer.load(0,{ shade: [0.3,'#000']});
-            //监听提交
-            form.on('submit(roleSearchFilter)', function (data) {
-                table.reload('roleTableId',{
-                    where: {
-                        searchTerm:data.field.searchTerm,
-                        searchContent:data.field.searchContent
-                    },
-                    height: 'full-140',
-                    page: true,
-                    done: function (res, curr, count) {
-                        common.resizeGrid();
-                        layer.close(loading);
-
-                    }
-                });
+        // 异步加载数据
+        $.get('${ctx}/cProduct/liRundata.do').done(function (data) {
+            data = JSON.parse(data);
+            // 填入数据
+            myChart.setOption({
+                xAxis: {
+                    data: data.productNameData
+                },
+                series: [{
+                    // 根据名字对应到相应的系列
+                    name: '利润',
+                    data: data.liRunData
+                }]
             });
-
-        });
-        /**角色新增*/
-        $(".roleAdd_btn").click(function(){
-            var url = "${ctx}/role/role_add.do";
-            common.cmsLayOpen('新增角色',url,'550px','340px');
         });
 
 
-        /**导出角色信息*/
-        $(".excelRoleExport_btn").click(function(){
-            var url = '${ctx}/role/excel_role_export.do';
-            $("#roleSearchForm").attr("action",url);
-            $("#roleSearchForm").submit();
-        });
+        // ========================222=======================
 
-
-        /**批量失效*/
-        $(".roleBatchFail_btn").click(function(){
-
-            //表格行操作
-            var checkStatus = table.checkStatus('roleTableId');
-
-            if(checkStatus.data.length == 0){
-                common.cmsLayErrorMsg("请选择要失效的角色信息");
-            }else{
-                var roleStatus = false;
-                var roleIds = [];
-                $(checkStatus.data).each(function(index,item){
-                    roleIds.push(item.roleId);
-                    //角色已失效
-                    if(item.roleStatus == 0){
-                        roleStatus = true;
-                    }else{
-                        roleStatus = false;
-                        return false;
+        var myChart2 = echarts.init(document.getElementById('main2'));
+        // 显示标题，图例和空的坐标轴
+        myChart2.setOption({
+            tooltip: {
+                trigger: 'item',
+                formatter: '{a} <br/>{b}: {c} ({d}%)'
+            },
+            legend: {
+                orient: 'vertical',
+                left: 10,
+                data: []
+            },
+            xAxis: {},
+            yAxis: {},
+            series: [{
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
                     }
-                });
-
-                if(roleStatus==false){
-                    common.cmsLayErrorMsg("当前选择的角色已失效");
-                    return false;
-                }
-                var url = "${ctx}/role/ajax_role_batch_fail.do";
-                var param = {roleIds:roleIds};
-                common.ajaxCmsConfirm('系统提示', '失效角色、解除角色、用户、菜单绑定关系?',url,param);
-
-            }
+                },
+                labelLine: {
+                    show: false
+                },
+                name: '利润',
+                data: []
+            }]
         });
 
-        /**监听工具条*/
-        table.on('tool(roleTableId)', function(obj) {
-            var data = obj.data; //获得当前行数据
-            var layEvent = obj.event; //获得 lay-event 对应的值
+        // 异步加载数据
+        $.get('${ctx}/cProduct/liRundata.do').done(function (data) {
+            data = JSON.parse(data);
+            // 填入数据
+            myChart2.setOption({
+                xAxis: {
+                    data: data.productNameData
+                },
+                legend: {
+                    data: data.productNameData
+                },
+                series: [{
+                    data: data.nameValue
+                }]
+            });
+        });
 
-            //修改角色
-            if(layEvent === 'role_edit') {
-                var roleId = data.roleId;
-                var url = "${ctx}/role/role_update.do?roleId="+roleId;
-                common.cmsLayOpen('编辑角色',url,'550px','340px');
 
-                //角色授权
-            }else if(layEvent === 'role_grant'){
+        // ========================333=======================
 
-                var roleId = data.roleId;
-                var roleStatus = data.roleStatus;
-                if(roleStatus == 1){
-                    common.cmsLayErrorMsg("当前角色已失效,不能授权");
-                    return false;
+        var myChart3 = echarts.init(document.getElementById('main3'));
+        // 显示标题，图例和空的坐标轴
+        myChart3.setOption({
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'cross',
+                    label: {
+                        backgroundColor: '#6a7985'
+                    }
                 }
-                var url =  "${ctx}/role/role_grant.do?roleId="+roleId;
-                common.cmsLayOpen('角色授权',url,'255px','520px');
-
-
-                //角色失效
-            }else if(layEvent === 'role_fail') {
-                var roleId = data.roleId;
-                var roleStatus = data.roleStatus;
-                if(roleStatus == 1){
-                    common.cmsLayErrorMsg("当前角色已失效");
-                    return false;
+            },
+            legend: {
+                data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
                 }
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value'
+                }
+            ],
+            series: [
+                {
+                    name: '邮件营销',
+                    type: 'line',
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: '联盟广告',
+                    type: 'line',
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: '视频广告',
+                    type: 'line',
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: '直接访问',
+                    type: 'line',
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: '搜索引擎',
+                    type: 'line',
+                    data: [820, 932, 901, 934, 1290, 1330, 1320]
+                }
+            ]
+        });
 
-                var url = "${ctx}/role/ajax_role_fail.do";
-                var param = {roleId:roleId};
-                common.ajaxCmsConfirm('系统提示', '失效角色、解除角色、用户、菜单绑定关系?',url,param);
-
-            }
+        // 异步加载数据
+        $.get('${ctx}/cProduct/liRundata.do').done(function (data) {
+            data = JSON.parse(data);
+            // 填入数据
+            myChart2.setOption({
+                xAxis: {
+                    data: data.productNameData
+                },
+                legend: {
+                    data: data.productNameData
+                },
+                series: [{
+                    data: data.nameValue
+                }]
+            });
         });
     });
-
-
-</script>
-
-<!-- 角色状态tpl-->
-<script type="text/html" id="roleStatusTpl">
-
-    {{# if(d.roleStatus == 0){ }}
-    <span class="label label-success ">0-有效</span>
-    {{# } else if(d.roleStatus == 1){ }}
-    <span class="label label-danger ">1-失效</span>
-    {{# } else { }}
-    {{d.roleStatus}}
-    {{# }  }}
-</script>
-
-
-<!--工具条 -->
-<script type="text/html" id="roleBar">
-    <div class="layui-btn-group">
-        <shiro:hasPermission name="moHbdnjz">
-            <a class="layui-btn layui-btn-xs role_edit" lay-event="role_edit"><i class="layui-icon larry-icon larry-bianji2"></i> 编辑</a>
-        </shiro:hasPermission>
-        <shiro:hasPermission name="bSG7LAmU">
-            <a class="layui-btn layui-btn-xs layui-btn-warm  role_grant" lay-event="role_grant"><i class="layui-icon larry-icon larry-jiaoseguanli3"></i>权限</a>
-        </shiro:hasPermission>
-        <shiro:hasPermission name="tkwJk34z">
-            <a class="layui-btn layui-btn-xs layui-btn-danger role_fail" lay-event="role_fail"><i class="layui-icon larry-icon larry-ttpodicon"></i>失效</a>
-        </shiro:hasPermission>
-    </div>
 </script>
 
 

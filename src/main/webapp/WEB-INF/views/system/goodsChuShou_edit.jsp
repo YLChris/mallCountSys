@@ -21,41 +21,36 @@
     <!--商品进购-->
     <form class="layui-form" action="">
         <input id="pageFlag"  type="hidden" value="${pageFlag}"/>
-        <input id="catagoryHide" type="hidden" style="display: none;" value="${cProduct.catagory}"/>
+        <input id="productSeq"  name="productSeq" type="hidden"/>
         <div class="layui-form-item">
             <label class="layui-form-label">商品名称</label>
             <div class="layui-input-block">
-                <input type="text" name="productName" required  lay-verify="required" value="${cProduct.productName}" placeholder="请输入商品名称" autocomplete="off" class="layui-input">
+                <input type="text" id="productName" name="productName" required  lay-verify="required" disabled placeholder="请输入商品名称" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">商品描述</label>
             <div class="layui-input-block">
-                <input type="text" name="productDesc" required  lay-verify="required" value="${cProduct.productDesc}" placeholder="请输入商品描述" autocomplete="off" class="layui-input">
+                <input type="text" id="productDesc" name="productDesc" required  lay-verify="required" placeholder="请输入商品描述" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
             <label class="layui-form-label">商品分类</label>
             <div class="layui-input-block">
-                <select name="catagory" lay-verify="required" id="catagory">
-                    <option value="">请选择商品分类</option>
-                    <option value="1">水果</option>
-                    <option value="2">衣服</option>
-                    <option value="3">食品</option>
-                    <option value="4">蔬菜</option>
-                </select>
+                <input type="text" id="catagory" name="catagory" required disabled lay-verify="required" placeholder="请输入商品分类" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">商品价格</label>
+            <label class="layui-form-label">商品出售价格</label>
             <div class="layui-input-block">
-                <input type="number" name="productPrice" required  value="${cProduct.productPrice}" lay-verify="required|productPrice" placeholder="请输入商品价格" autocomplete="off" class="layui-input">
+                <input type="number" id="xiaoPrice" name="xiaoPrice" required  lay-verify="required|productPrice" placeholder="请输入商品价格" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-form-item">
-            <label class="layui-form-label">进购数量</label>
+            <label class="layui-form-label">商品状态</label>
             <div class="layui-input-block">
-                <input type="number" name="productNum" required  lay-verify="required|productNum" placeholder="请输入进购数量" autocomplete="off" class="layui-input">
+                <input type="radio" name="productStatus" value='1' title="上架" id="up">
+                <input type="radio" name="productStatus" value='0' title="下架" id="down">
             </div>
         </div>
         <div class="layui-form-item">
@@ -74,19 +69,11 @@
                 form = layui.form,
                 common = layui.common,
                 layer = parent.layer === undefined ? layui.layer : parent.layer;
-
         /**表单验证*/
         form.verify({
             productPrice: function(value,item){
                 if(!new RegExp("^[0-9]+$").test(value)){
-                    return '进购价格只能为数字';
-                }
-            },
-            productNum:function(value,item){
-                if(!new RegExp("^[0-9]+$").test(value)){
-                    return '进购数量只能为数字';
-                }else if(value==0){
-                    return '进购数量不能为零';
+                    return '出售价格只能为数字';
                 }
             }
         });
@@ -101,11 +88,12 @@
             });
         })
         form.render();
+
         //保存
         form.on("submit(saveGoods)",function(data){
             var roleSaveLoading = top.layer.msg('数据提交中，请稍候',{icon: 16,time:false,shade:0.8});
             $.ajax({
-                url : '${ctx}/cProduct/ajax_save_goods.do',
+                url : '${ctx}/cProduct/ajax_saveChushou_goods.do',
                 type : 'post',
                 async: false,
                 data : data.field,

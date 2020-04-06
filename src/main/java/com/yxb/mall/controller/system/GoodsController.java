@@ -77,4 +77,13 @@ public class GoodsController extends BasicController {
     public String shouruZhichu() {
         return "system/shouruZhichu";
     }
+
+    /**
+     * 商品出售记录
+     * @return
+     */
+    @RequestMapping("/chushouRecord.do")
+    public String chushouRecord(){
+        return "system/goodsInfoRecord";
+    }
 }

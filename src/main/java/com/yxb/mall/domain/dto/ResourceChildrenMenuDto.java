@@ -36,8 +36,6 @@ import java.io.Serializable;
 
 /**
  * 资源菜单Dto
- * @author yangxiaobing
- * @date 2017/7/28
  */
 
 public class ResourceChildrenMenuDto implements Serializable {

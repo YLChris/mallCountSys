@@ -11,11 +11,6 @@
     <link rel="shortcut icon" href="${ctx}/static/img/favicon.ico">
 
     <link rel="stylesheet" href="${ctx}/static/layui_v2/css/layui.css">
-    <link rel="stylesheet" href="${ctx}/static/css/global.css">
-
-    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/common.css" media="all">
-    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/personal.css" media="all">
-    <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_9h680jcse4620529.css">
     <script src="${ctx}/static/layui_v2/layui.js"></script>
 
 
@@ -28,42 +23,26 @@
                     <form class="layui-form" id="roleSearchForm">
                         <div class="layui-input-inline" style="width:110px;">
                             <select name="searchTerm" >
-                                <option value="roleNameTerm">角色名称</option>
+                                <option value="productName">商品名称</option>
+                                <option value="catagory">商品分类</option>
                             </select>
                         </div>
                         <div class="layui-input-inline" style="width:145px;">
                             <input type="text" name="searchContent" value="" placeholder="请输入关键字" class="layui-input search_input">
                         </div>
-                        <a class="layui-btn roleSearchList_btn" lay-submit lay-filter="roleSearchFilter"><i class="layui-icon larry-icon larry-chaxun7"></i>查询</a>
+                        <a class="layui-btn goodsConditionSearchList_btn" lay-submit lay-filter="goodsConditionSearchFilter"><i class="layui-icon larry-icon larry-chaxun7"></i>查询</a>
                     </form>
                 </div>
-                <shiro:hasPermission name="nxRVZA5i">
-                    <div class="layui-inline">
-                        <a class="layui-btn layui-btn-normal  roleAdd_btn"> <i class="layui-icon larry-icon larry-xinzeng1"></i>新增角色</a>
-                    </div>
-                </shiro:hasPermission>
-                <shiro:hasPermission name="oCNcsKmk">
-                    <div class="layui-inline">
-                        <a class="layui-btn layui-btn-normal excelRoleExport_btn"  style="background-color:#5FB878"> <i class="layui-icon larry-icon larry-danye"></i>导出</a>
-                    </div>
-                </shiro:hasPermission>
-                <shiro:hasPermission name="qsieHTy4">
-                    <div class="layui-inline">
-                        <a class="layui-btn layui-btn-danger roleBatchFail_btn"><i class="layui-icon larry-icon larry-shanchu"></i>批量失效</a>
-                    </div>
-                </shiro:hasPermission>
-
             </blockquote>
             <div class="larry-separate"></div>
-            <!-- 角色列表 -->
             <div class="layui-tab-item  layui-show" style="padding: 10px 15px;">
-                <table id="roleTableList" lay-filter="roleTableId"></table>
+                <table id="goodConditionTableList" lay-filter="goodConditionTableId"></table>
             </div>
-
         </div>
     </div>
 </div>
 <script type="text/javascript">
+    var productFlag;
     layui.config({
         base : "${ctx}/static/js/"
     }).use(['form', 'table', 'layer','common'], function () {
@@ -75,44 +54,39 @@
 
         var loading = layer.load(0,{ shade: [0.3,'#000']});
 
-        /**角色表格加载*/
+        /**商品表格加载*/
         table.render({
-            elem: '#roleTableList',
-            url: '${ctx}/role/ajax_role_list.do',
-            id:'roleTableId',
+            elem: '#goodConditionTableList',
+            url: '${ctx}/cProduct/goodsKuCun.do',
+            id:'goodConditionTableId',
             method: 'post',
             height:'full-140',
             skin:'row',
             even:'true',
             size: 'sm',
             cols: [[
-                {type:"numbers"},
-                {type:"checkbox"},
-                {field:'roleName', title: '角色名称',align:'center' },
-                {field:'roleStatus', title: '角色状态',align:'center',width: '6%',templet: '#roleStatusTpl'},
-                {field:'resourceNames', title: '菜单资源',align:'center'},
-                {field:'roleRemark', title: '角色说明',align:'center'},
-                {field:'creator', title: '创建人',align:'center'},
-                {field:'createTime', title: '创建时间',align:'center',width: '12%'},
-                {field:'modifier', title: '修改人',align:'center'},
-                {field:'modifierTime', title: '修改时间',align:'center',width: '12%'},
-                {title: '操作', align:'center', width: '17%',toolbar: '#roleBar'}
-
+                {type:"numbers",title: '序号'},
+                {field:'productName', title: '商品名称',align:'center' },
+                {field:'productDesc', title: '商品描述',align:'center' },
+                {field:'xiaoPrice', title: '商品出售价格',align:'center' },
+                {field:'productSeq', title: '商品标识',hide: true,align:'center' },
+                {field:'catagory', title: '商品分类',align:'center',templet: '#titleTpl'},
+                {field:'productStatus', title: '商品状态',align:'center',templet: '#proFlag'},
+                {title: '操作', align:'center', width: '17%',toolbar: '#goodBar'}
             ]],
             page: true,
             done: function (res, curr, count) {
                 common.resizeGrid();
                 layer.close(loading);
-
             }
         });
 
         /**查询*/
-        $(".roleSearchList_btn").click(function(){
+        $(".goodsConditionSearchList_btn").click(function(){
             var loading = layer.load(0,{ shade: [0.3,'#000']});
             //监听提交
-            form.on('submit(roleSearchFilter)', function (data) {
-                table.reload('roleTableId',{
+            form.on('submit(goodsConditionSearchFilter)', function (data) {
+                table.reload('goodConditionTableId',{
                     where: {
                         searchTerm:data.field.searchTerm,
                         searchContent:data.field.searchContent
@@ -122,130 +96,104 @@
                     done: function (res, curr, count) {
                         common.resizeGrid();
                         layer.close(loading);
-
                     }
                 });
             });
 
         });
-        /**角色新增*/
-        $(".roleAdd_btn").click(function(){
-            var url = "${ctx}/role/role_add.do";
-            common.cmsLayOpen('新增角色',url,'550px','340px');
-        });
 
-
-        /**导出角色信息*/
-        $(".excelRoleExport_btn").click(function(){
-            var url = '${ctx}/role/excel_role_export.do';
-            $("#roleSearchForm").attr("action",url);
-            $("#roleSearchForm").submit();
-        });
-
-
-        /**批量失效*/
-        $(".roleBatchFail_btn").click(function(){
-
-            //表格行操作
-            var checkStatus = table.checkStatus('roleTableId');
-
-            if(checkStatus.data.length == 0){
-                common.cmsLayErrorMsg("请选择要失效的角色信息");
-            }else{
-                var roleStatus = false;
-                var roleIds = [];
-                $(checkStatus.data).each(function(index,item){
-                    roleIds.push(item.roleId);
-                    //角色已失效
-                    if(item.roleStatus == 0){
-                        roleStatus = true;
-                    }else{
-                        roleStatus = false;
-                        return false;
-                    }
-                });
-
-                if(roleStatus==false){
-                    common.cmsLayErrorMsg("当前选择的角色已失效");
-                    return false;
-                }
-                var url = "${ctx}/role/ajax_role_batch_fail.do";
-                var param = {roleIds:roleIds};
-                common.ajaxCmsConfirm('系统提示', '失效角色、解除角色、用户、菜单绑定关系?',url,param);
-
-            }
-        });
 
         /**监听工具条*/
-        table.on('tool(roleTableId)', function(obj) {
+        table.on('tool(goodConditionTableId)', function(obj) {
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值
 
-            //修改角色
-            if(layEvent === 'role_edit') {
-                var roleId = data.roleId;
-                var url = "${ctx}/role/role_update.do?roleId="+roleId;
-                common.cmsLayOpen('编辑角色',url,'550px','340px');
-
-                //角色授权
-            }else if(layEvent === 'role_grant'){
+            //修改商品
+            if(layEvent === 'good_edit') {
+                var productId = data.productId;
+                var url = "${ctx}/cProduct/goodsChuShou_edit.do?productId="+productId;
+                layui.layer.open({
+                    title : '<i class="larry-icon larry-bianji3"></i>'+'编辑商品',
+                    type : 2,
+                    skin : 'layui-layer-molv',
+                    content : url,
+                    area: ['550px', '340px'],
+                    resize:true,
+                    anim:1,
+                    success : function(layero, index){
+                        var body = layer.getChildFrame('body', index);
+                        var iframeWin = layero.find('iframe')[0].contentWindow;//新iframe窗口的对象
+                        body.find("#productName").val(data.productName);
+                        body.find("#productDesc").val(data.productDesc);
+                        body.find("#xiaoPrice").val(data.xiaoPrice);
+                        body.find("#productSeq").val(data.productSeq);
+                        productFlag = data.productStatus;
+                        switch (data.catagory) {
+                            case "1":
+                                body.find("#catagory").val("水果");
+                                break;
+                            case "2":
+                                body.find("#catagory").val("衣服");
+                                break;
+                            case "3":
+                                body.find("#catagory").val("食品");
+                                break;
+                            case "4":
+                                body.find("#catagory").val("蔬菜");
+                                break;
+                        }
+                        form.render();
+                        if(productFlag == 1){
+                            body.find("#up").attr("checked",true);
+                            iframeWin.layui.form.render();
+                        }else if(productFlag == 0){
+                            body.find("#down").attr("checked",true);
+                            iframeWin.layui.form.render();
+                        }
+                    }
+                });
+                //商品授权
+            }else if(layEvent === 'goodXiajia'){
 
                 var roleId = data.roleId;
                 var roleStatus = data.roleStatus;
                 if(roleStatus == 1){
-                    common.cmsLayErrorMsg("当前角色已失效,不能授权");
+                    common.cmsLayErrorMsg("当前商品已失效,不能授权");
                     return false;
                 }
                 var url =  "${ctx}/role/role_grant.do?roleId="+roleId;
-                common.cmsLayOpen('角色授权',url,'255px','520px');
-
-
-                //角色失效
-            }else if(layEvent === 'role_fail') {
-                var roleId = data.roleId;
-                var roleStatus = data.roleStatus;
-                if(roleStatus == 1){
-                    common.cmsLayErrorMsg("当前角色已失效");
-                    return false;
-                }
-
-                var url = "${ctx}/role/ajax_role_fail.do";
-                var param = {roleId:roleId};
-                common.ajaxCmsConfirm('系统提示', '失效角色、解除角色、用户、菜单绑定关系?',url,param);
-
+                common.cmsLayOpen('商品授权',url,'255px','520px');
             }
         });
     });
 
 
 </script>
-
-<!-- 角色状态tpl-->
-<script type="text/html" id="roleStatusTpl">
-
-    {{# if(d.roleStatus == 0){ }}
-    <span class="label label-success ">0-有效</span>
-    {{# } else if(d.roleStatus == 1){ }}
-    <span class="label label-danger ">1-失效</span>
-    {{# } else { }}
-    {{d.roleStatus}}
-    {{# }  }}
+<!--工具条 -->
+<script type="text/html" id="goodBar">
+    <div class="layui-btn-group">
+        <a class="layui-btn layui-btn-xs" lay-event="good_edit"><i class="layui-icon larry-icon larry-bianji2"></i> 商品信息修改</a>
+        <%--<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="goodXiajia"><i class="layui-icon larry-icon larry-bianji2"></i> 商品下架</a>--%>
+    </div>
 </script>
 
-
-<!--工具条 -->
-<script type="text/html" id="roleBar">
-    <div class="layui-btn-group">
-        <shiro:hasPermission name="moHbdnjz">
-            <a class="layui-btn layui-btn-xs role_edit" lay-event="role_edit"><i class="layui-icon larry-icon larry-bianji2"></i> 编辑</a>
-        </shiro:hasPermission>
-        <shiro:hasPermission name="bSG7LAmU">
-            <a class="layui-btn layui-btn-xs layui-btn-warm  role_grant" lay-event="role_grant"><i class="layui-icon larry-icon larry-jiaoseguanli3"></i>权限</a>
-        </shiro:hasPermission>
-        <shiro:hasPermission name="tkwJk34z">
-            <a class="layui-btn layui-btn-xs layui-btn-danger role_fail" lay-event="role_fail"><i class="layui-icon larry-icon larry-ttpodicon"></i>失效</a>
-        </shiro:hasPermission>
-    </div>
+<script type="text/html" id="titleTpl">
+    {{#  if(d.catagory == 1){ }}
+    <span>水果</span>
+    {{#  }else if(d.catagory == 2){ }}
+    <span>衣服</span>
+    {{#  }else if(d.catagory == 3){ }}
+    <span>食品</span>
+    {{#  }else if(d.catagory == 4){ }}
+    <span>蔬菜</span>
+    {{#  } }}
+</script>
+<script type="text/html" id="proFlag">
+    {{#  if(d.productStatus == 0){ }}
+    <span  style="color:red;">未上架</span>
+    {{#  }else if(d.productStatus == 1){ }}
+    <span  style="color:green;">已上架</span>
+    {{#  } }}
 </script>
 
 

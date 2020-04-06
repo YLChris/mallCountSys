@@ -14,7 +14,9 @@ import java.io.Serializable;
 @Service
 public class CProductCondition extends PageDto implements Serializable {
     private static final long serialVersionUID = -57267664864795597L;
-    
+
+    //产品标识
+    private String productSeq;
     private String productName;
     /**
     * 产品进购价
@@ -56,6 +58,41 @@ public class CProductCondition extends PageDto implements Serializable {
      * 查询内容
      */
     private String searchContent;
+
+    /**
+     * 商品描述
+     */
+    private String productDesc;
+
+    /**
+     * 商品状态
+     */
+    private String productStatus;
+
+
+    public String getProductSeq() {
+        return productSeq;
+    }
+
+    public void setProductSeq(String productSeq) {
+        this.productSeq = productSeq;
+    }
+
+    public String getProductStatus() {
+        return productStatus;
+    }
+
+    public void setProductStatus(String productStatus) {
+        this.productStatus = productStatus;
+    }
+
+    public String getProductDesc() {
+        return productDesc;
+    }
+
+    public void setProductDesc(String productDesc) {
+        this.productDesc = productDesc;
+    }
 
     public String getSearchTerm() {
         return searchTerm;

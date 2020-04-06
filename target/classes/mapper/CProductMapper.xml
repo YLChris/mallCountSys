@@ -14,6 +14,17 @@
         <result property="productTotalPrice" column="product_total_price" jdbcType="VARCHAR"/>
     </resultMap>
 
+    <resultMap type="com.yxb.mall.domain.vo.CSelltimeProduct" id="CSelltimeProductMap">
+        <result property="productSeq" column="product_seq" jdbcType="VARCHAR"/>
+        <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+        <result property="xiaoshouYear" column="xiaoshou_year" jdbcType="VARCHAR"/>
+        <result property="xiaoshouMonth" column="xiaoshou_month" jdbcType="VARCHAR"/>
+        <result property="xiaoshouDay" column="xiaoshou_day" jdbcType="VARCHAR"/>
+        <result property="xiaoshouLiang" column="xiaoshou_liang" jdbcType="VARCHAR"/>
+        <result property="xiaoshouPrice" column="xiaoshou_price" jdbcType="VARCHAR"/>
+        <result property="xiaoshouTotalPrice" column="xiaoshou_total_price" jdbcType="VARCHAR"/>
+        <result property="operator" column="operator" jdbcType="VARCHAR"/>
+    </resultMap>
     <!--查询单个-->
     <select id="queryById" resultMap="CProductMap">
         select
@@ -68,15 +79,15 @@
         product_id, product_name, product_price, jingou_time, jingou_operator, update_time,catagory,update_operator,product_num,product_total_price
         from c_product
         <where>
-            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'productName' ">
-                AND  product_name LIKE CONCAT('%', #{searchContent,jdbcType=VARCHAR}, '%')
+            <if test="cProduct.searchTerm != null and cProduct.searchTerm != '' and cProduct.searchContent != null and  cProduct.searchContent != '' and  cProduct.searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{cProduct.searchContent,jdbcType=VARCHAR}, '%')
             </if>
-            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'catagory' ">
-              AND catagory = #{searchContent}
+            <if test="cProduct.searchTerm != null and cProduct.searchTerm != '' and cProduct.searchContent != null and  cProduct.searchContent != '' and  cProduct.searchTerm == 'catagory' ">
+              AND catagory = #{cProduct.searchContent}
             </if>
         </where>
         order by jingou_time DESC
-        LIMIT #{start},#{limit}
+        LIMIT #{start},#{end}
     </select>
     <!-- 验证角色名称唯一性 -->
     <select id="selectProductNameCheck" resultType="java.lang.Long">
@@ -110,6 +121,50 @@
                AND product_price = #{productPrice,jdbcType=VARCHAR}
             </if>
         </where>
+    </select>
+    <!--商品出售记录查询-->
+    <select id="goodsRecordInfo" resultMap="CSelltimeProductMap">
+        select
+        product_seq, product_name, xiaoshou_year, xiaoshou_month, xiaoshou_day, xiaoshou_liang, xiaoshou_price, xiaoshou_total_price, operator
+        from c_selltime_product
+        <where>
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{cSelltimeProduct.searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'catagory' ">
+                AND catagory = #{cSelltimeProduct.searchContent}
+            </if>
+        </where>
+        order by xiaoshou_year,xiaoshou_month,xiaoshou_day DESC
+        limit #{start},#{end}
+    </select>
+    <select id="goodsRecordInfoCount" resultType="java.util.Map">
+        select
+        count(product_seq) counts
+        from c_selltime_product
+        <where>
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{cSelltimeProduct.searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'catagory' ">
+                AND catagory = #{cSelltimeProduct.searchContent}
+            </if>
+        </where>
+    </select>
+    <!--商品出售记录查询-->
+    <select id="goodsRecordInfo1" resultMap="CSelltimeProductMap">
+        select
+        product_seq, product_name, xiaoshou_year, xiaoshou_month, xiaoshou_day, xiaoshou_liang, xiaoshou_price, xiaoshou_total_price, operator
+        from c_selltime_product
+        <where>
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{cSelltimeProduct.searchContent,jdbcType=VARCHAR}, '%')
+            </if>
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'catagory' ">
+                AND catagory = #{cSelltimeProduct.searchContent}
+            </if>
+        </where>
+        order by xiaoshou_year,xiaoshou_month,xiaoshou_day DESC
     </select>
     <!--新增所有列-->
     <insert id="insert" keyProperty="productId" useGeneratedKeys="true">

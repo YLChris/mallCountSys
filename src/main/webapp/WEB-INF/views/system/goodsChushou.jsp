@@ -43,16 +43,16 @@
     </div>
 </div>
 <script type="text/javascript">
+    var $,common,productTotalNumArr = new Array(),productPriceArr = new Array();
     layui.config({
         base : "${ctx}/static/js/"
     }).extend({
         formSelects: 'formSelects-v4'
     }).use(['form', 'table', 'layer','common','formSelects'], function () {
-        var $ =  layui.$,
-            form = layui.form,
+        $ =  layui.$,common = layui.common;
+        var  form = layui.form,
             table = layui.table,
             layer = layui.layer,
-            common = layui.common,
             formSelects = layui.formSelects;
         var productHtml;//存储商品
         layui.formSelects.config('GoodsChuShouSelect', {
@@ -74,27 +74,81 @@
             $(".productItemList").empty();
             var productValArr = layui.formSelects.value('GoodsChuShouSelect', 'val');//取值val数组
             productHtml = "";
+            productTotalNumArr = [];
+            productPriceArr = [];
             for(index in productValArr){//循环组装商品
                 var productItemObject = productValArr[index].split("-");
-                var object= "'"+productItemObject[0]+index+"'";
                 productHtml="<div><label class='layui-form-label productName layui-elip'>"+productItemObject[0]+"</label>" +
                     "<input type='number' class='layui-input productItem goodName"+productItemObject[0]+index+"' " +
-                    "name='"+productItemObject[0]+index+"' value='1' placeholder='请输入购买数量' required  " +
-                    "lay-verify='required' autocomplete='off' oninput='changeProiceValue(this.value,"+productItemObject[1]+","+object+");'/>" +
-                    "<input type='number' name='goodPrice"+productItemObject[0]+index+"' placeholder='价格' required  " +
+                    "name='productTotalNum"+productItemObject[2]+"' value='1' placeholder='请输入购买数量' required  " +
+                    "lay-verify='required' autocomplete='off' onblur='changeProiceValue(this.value,"+productItemObject[1]+","+productItemObject[2]+");'/>" +
+                    "<input type='number' name='productPrice"+productItemObject[2]+"' placeholder='价格' required  " +
                     "lay-verify='required' autocomplete='off' class='layui-input productPrice' " +
                     "value='"+productItemObject[1]+"' disabled/></div>"
                 $(".productItemList").append(productHtml);
+                productTotalNumArr.push("productTotalNum"+productItemObject[2]);
+                productPriceArr.push("productPrice"+productItemObject[2]);
             }
-            $(".productItemList").append("<a class='layui-btn' href='javascript:void(0);' style='margin-left: 45%;margin-top:10px;'>确定出售</a>");
+            $(".productItemList").append("<a class='layui-btn' style='margin-left: 45%;margin-top:10px;' onclick='mkChushou()'>确定出售</a>");
         });
+
 
     });
     //更改价格
-    function changeProiceValue(thisItem,price,priceName){
-        console.log(thisItem+"---"+price+"---"+priceName)
+    function changeProiceValue(thisItem,price,productSeq){
+        if(!new RegExp("^\\d*[1-9]\\d*$").test(thisItem)|| null==thisItem || ""==thisItem){
+            common.cmsLayErrorMsg('出售数量只能正整数');
+            $("input[name=productPrice"+productSeq+"]").val(price);
+            return false;
+        }
+        var totalPrice = thisItem*price;
+        $("input[name=productPrice"+productSeq+"]").val(totalPrice);
     }
+    //确认出售
+    function mkChushou(){
+        var productInfoArr = "";//最后组装的商品信息
+        var productTotalNumArr1 = this.productTotalNumArr;//进购数量
+        var productPriceArr1 = this.productPriceArr;//进购总价格
+        for(productTotalNumIndex in productTotalNumArr1){
+            var productTotalNumItem = productTotalNumArr1[productTotalNumIndex];//进购数量name属性
+            for(productPriceIndex in productPriceArr1){
+                var productPriceItem = productPriceArr1[productPriceIndex];//进购价格name属性
+                var productSeq;
+                //两者商品序号一致  组装信息
+                if(productTotalNumItem.substring(productTotalNumItem.length-6)==productPriceItem.substring(productPriceItem.length-6)){
+                    productSeq = productTotalNumItem.substring(productTotalNumItem.length-6);//商品序号
+                    var num = $("input[name="+productTotalNumItem+"]").val();//进购商品数量
+                    if(!new RegExp("^\\d*[1-9]\\d*$").test(num)|| null==num || ""==num){
+                        common.cmsLayErrorMsg('出售数量只能为正整数');
+                        return false;
+                    }
+                    var itemProduct = productSeq+","+num+","+$("input[name="+productPriceItem+"]").val()+"&";
+                    productInfoArr=productInfoArr+itemProduct;
+                }
+            }
+        }
 
+        //数据访问后台
+        if(productInfoArr){
+            var param = {productInfoArr:productInfoArr};
+            $.ajax({
+                url : '${ctx}/cProduct/Chushou.do',
+                type : 'post',
+                async: false,
+                data : param,
+                success : function(data) {
+                    if(data.returnCode == 0000){
+                        top.layer.msg("出售成功");
+                        location.reload();
+                    }else{
+                        top.layer.msg(data.returnMessage,{icon: 5});
+                    }
+                },error:function(data){
+
+                }
+            });
+        }
+    }
 
 </script>
 </body>

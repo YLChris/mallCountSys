@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2020-03-17 01:00:45
+Date: 2020-04-06 15:29:25
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -62,7 +62,7 @@ CREATE TABLE `cc_data_cleaning` (
   `data_count` int(11) DEFAULT NULL COMMENT '数量',
   PRIMARY KEY (`data_id`),
   UNIQUE KEY `unique_data_type_time` (`data_type`,`data_time`) COMMENT '数据类型、日期唯一建索引'
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cc_data_cleaning
@@ -70,6 +70,20 @@ CREATE TABLE `cc_data_cleaning` (
 INSERT INTO `cc_data_cleaning` VALUES ('1', '1', '2020-03-12', '1');
 INSERT INTO `cc_data_cleaning` VALUES ('3', '1', '2020-03-14', '0');
 INSERT INTO `cc_data_cleaning` VALUES ('4', '1', '2020-03-15', '1');
+INSERT INTO `cc_data_cleaning` VALUES ('9', '1', '2020-03-16', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('10', '1', '2020-03-17', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('11', '1', '2020-03-18', '1');
+INSERT INTO `cc_data_cleaning` VALUES ('15', '1', '2020-03-19', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('16', '1', '2020-03-20', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('17', '1', '2020-03-21', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('18', '1', '2020-03-22', '1');
+INSERT INTO `cc_data_cleaning` VALUES ('19', '1', '2020-03-23', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('20', '1', '2020-03-24', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('21', '1', '2020-03-25', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('22', '1', '2020-03-26', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('23', '1', '2020-03-27', '0');
+INSERT INTO `cc_data_cleaning` VALUES ('24', '1', '2020-03-28', '1');
+INSERT INTO `cc_data_cleaning` VALUES ('26', '1', '2020-03-29', '1');
 
 -- ----------------------------
 -- Table structure for cc_resource
@@ -134,7 +148,7 @@ INSERT INTO `cc_resource` VALUES ('61', null, '商场收支分析', '0', 'YoHljQ
 INSERT INTO `cc_resource` VALUES ('62', '61', '统计与支出', '0', 'kr76mR7g', '', 'larry-shenheguanli', '2', '0', null, '', 'admin', '2020-03-12 16:32:57', null, null);
 INSERT INTO `cc_resource` VALUES ('63', '62', '利润信息图形化', '0', 'TYogBxzh', '/goods/liRunXinxi.do', 'larry-zidian', '3', '0', null, '', 'admin', '2020-03-12 16:44:52', null, null);
 INSERT INTO `cc_resource` VALUES ('64', '62', '商场收入支出', '0', 'E9GL7gyY', '/goods/shouruZhichu.do', 'larry-iconfontcolor16', '3', '0', '1', '', 'admin', '2020-03-12 16:45:54', null, null);
-INSERT INTO `cc_resource` VALUES ('65', '56', '商品销量', '0', 'M3U069VE', '/goods/goodsXiaoLiang.do', 'larry-chaxun3', '2', '0', null, '', 'admin', '2020-03-12 19:41:08', null, null);
+INSERT INTO `cc_resource` VALUES ('65', '56', '商品出售记录', '0', '0dzv7sqZ', '/goods/chushouRecord.do', 'larry-shuaxin4', '2', '0', null, '', 'admin', '2020-03-22 21:22:41', null, null);
 
 -- ----------------------------
 -- Table structure for cc_role
@@ -150,13 +164,15 @@ CREATE TABLE `cc_role` (
   `modifier` varchar(40) DEFAULT NULL,
   `modifier_time` datetime DEFAULT NULL,
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8 COMMENT='角色表';
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COMMENT='角色表';
 
 -- ----------------------------
 -- Records of cc_role
 -- ----------------------------
 INSERT INTO `cc_role` VALUES ('55', '系统管理员', '0', '', 'admin', '2020-03-12 13:50:41', 'admin', '2020-03-12 16:59:55');
 INSERT INTO `cc_role` VALUES ('56', '收费员', '0', '主要为商场收费员使用', 'admin', '2020-03-12 16:50:14', null, null);
+INSERT INTO `cc_role` VALUES ('57', '测试', '1', '', 'admin', '2020-03-22 00:16:52', 'admin', '2020-03-22 00:17:17');
+INSERT INTO `cc_role` VALUES ('58', '测试额', '1', '', 'admin', '2020-03-22 00:17:02', 'admin', '2020-03-22 00:17:17');
 
 -- ----------------------------
 -- Table structure for cc_role_resource
@@ -242,13 +258,22 @@ CREATE TABLE `cc_sys_log` (
   `log_start_time` datetime DEFAULT NULL COMMENT '请求开始时间',
   `log_elapsed_time` bigint(20) DEFAULT NULL COMMENT '请求耗时',
   PRIMARY KEY (`log_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cc_sys_log
 -- ----------------------------
 INSERT INTO `cc_sys_log` VALUES ('1', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"skpiu\",\"username\":\"admin\"}', null, 'admin', '0:0:0:0:0:0:0:1', null, '2020-03-12 20:23:45', '58');
 INSERT INTO `cc_sys_log` VALUES ('2', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"c9t69\",\"username\":\"711027\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-15 22:26:56', '39');
+INSERT INTO `cc_sys_log` VALUES ('3', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"PMYY1\",\"username\":\"711027\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-18 21:48:27', '59');
+INSERT INTO `cc_sys_log` VALUES ('4', '保存商品信息', 'info', '/cProduct/ajax_save_goods.do', 'POST', '{\"productDesc\":\"方便面描述\",\"catagory\":\"3\",\"productNum\":\"10\",\"productName\":\"方便面\",\"productPrice\":\"3\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-22 18:52:14', '21');
+INSERT INTO `cc_sys_log` VALUES ('5', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"86bzs\",\"username\":\"admin\"}', null, 'admin', '0:0:0:0:0:0:0:1', null, '2020-03-22 21:21:22', '6');
+INSERT INTO `cc_sys_log` VALUES ('6', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"82med\",\"username\":\"711027\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-28 23:09:24', '174');
+INSERT INTO `cc_sys_log` VALUES ('7', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"3fvuv\",\"username\":\"711027\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-28 23:49:17', '109');
+INSERT INTO `cc_sys_log` VALUES ('8', '用户登陆', 'info', '/loginCheck.do', 'POST', '{\"password\":\"\",\"code\":\"cxsmx\",\"username\":\"711027\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-29 10:56:49', '174');
+INSERT INTO `cc_sys_log` VALUES ('9', '保存商品信息', 'info', '/cProduct/ajax_saveChushou_goods.do', 'POST', '{\"productDesc\":\"用于洗脸\",\"catagory\":\"衣服\",\"xiaoPrice\":\"3\",\"productStatus\":\"1\",\"productSeq\":\"645033\",\"productName\":\"毛巾\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-29 11:19:58', '4');
+INSERT INTO `cc_sys_log` VALUES ('10', '保存商品信息', 'info', '/cProduct/ajax_save_goods.do', 'POST', '{\"productDesc\":\"水果类\",\"catagory\":\"1\",\"productNum\":\"30\",\"productName\":\"榴莲\",\"productPrice\":\"100\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-29 13:42:00', '11');
+INSERT INTO `cc_sys_log` VALUES ('11', '保存商品信息', 'info', '/cProduct/ajax_saveChushou_goods.do', 'POST', '{\"productDesc\":\"水果类\",\"catagory\":\"水果\",\"xiaoPrice\":\"150\",\"productStatus\":\"1\",\"productSeq\":\"720497\",\"productName\":\"榴莲\"}', null, '711027', '0:0:0:0:0:0:0:1', null, '2020-03-29 13:42:20', '24');
 
 -- ----------------------------
 -- Table structure for cc_user
@@ -313,31 +338,27 @@ CREATE TABLE `c_product` (
   `product_num` int(255) NOT NULL,
   `product_total_price` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of c_product
 -- ----------------------------
-INSERT INTO `c_product` VALUES ('17', '三只松鼠', '10', '2020-03-15 18:11:51', '711027', null, null, '3', '20', '200');
-INSERT INTO `c_product` VALUES ('20', '三只松鼠', '10', '2020-03-15 18:21:44', '711027', null, null, '3', '20', '200');
-INSERT INTO `c_product` VALUES ('21', '三只松鼠', '10', '2020-03-15 18:25:09', '711027', null, null, '3', '33', '330');
-INSERT INTO `c_product` VALUES ('22', '三只松鼠', '10', '2020-03-15 18:31:52', '711027', null, null, '3', '20', '200');
-INSERT INTO `c_product` VALUES ('23', '三只松鼠', '10', '2020-03-15 18:34:15', '711027', null, null, '3', '7', '70');
-INSERT INTO `c_product` VALUES ('24', '三只松鼠', '10', '2020-03-15 18:37:41', '711027', null, null, '3', '20', '200');
-INSERT INTO `c_product` VALUES ('25', '三只松鼠', '10', '2020-03-15 18:42:09', '711027', null, null, '3', '200', '2000');
-INSERT INTO `c_product` VALUES ('26', '三只松鼠', '10', '2020-03-15 18:45:58', '711027', null, null, '3', '20', '200');
-INSERT INTO `c_product` VALUES ('27', '张小妹方便面', '20', '2020-03-15 18:46:31', '711027', null, null, '3', '20', '400');
-INSERT INTO `c_product` VALUES ('28', '张小妹方便面', '20', '2020-03-15 19:36:10', '711027', null, null, '3', '20', '400');
-INSERT INTO `c_product` VALUES ('31', '聚美优品', '100', '2020-03-16 19:46:39', '711027', null, null, '2', '10', '1000');
-INSERT INTO `c_product` VALUES ('32', '榴莲', '50', '2020-03-17 00:47:51', '711027', null, null, '1', '30', '1500');
-INSERT INTO `c_product` VALUES ('33', '胡萝卜', '10', '2020-03-17 00:48:22', '711027', null, null, '4', '10', '100');
+INSERT INTO `c_product` VALUES ('60', '大葱', '2', '2020-03-22 18:49:54', '711027', null, null, '4', '10', '20');
+INSERT INTO `c_product` VALUES ('61', '方便面', '3', '2020-03-22 18:52:14', '711027', null, null, '3', '10', '30');
+INSERT INTO `c_product` VALUES ('62', '牙刷', '5', '2020-03-22 18:53:16', '711027', null, null, '1', '10', '50');
+INSERT INTO `c_product` VALUES ('63', '大葱', '2', '2020-03-22 21:17:59', '711027', null, null, '4', '10', '20');
+INSERT INTO `c_product` VALUES ('64', '毛巾', '20', '2020-03-29 11:19:46', '711027', null, null, '2', '40', '800');
+INSERT INTO `c_product` VALUES ('65', '西红柿', '10', '2020-03-29 13:41:36', '711027', null, null, '4', '30', '300');
+INSERT INTO `c_product` VALUES ('66', '榴莲', '100', '2020-03-29 13:42:00', '711027', null, null, '1', '30', '3000');
 
 -- ----------------------------
 -- Table structure for c_product_condition
 -- ----------------------------
 DROP TABLE IF EXISTS `c_product_condition`;
 CREATE TABLE `c_product_condition` (
+  `product_seq` varchar(6) NOT NULL,
   `product_name` varchar(255) DEFAULT NULL,
+  `product_desc` varchar(255) DEFAULT NULL,
   `product_price` varchar(255) DEFAULT NULL COMMENT '产品进购价',
   `catagory` varchar(255) DEFAULT NULL,
   `ku_cun_liang` int(255) DEFAULT NULL COMMENT '库存量',
@@ -345,14 +366,54 @@ CREATE TABLE `c_product_condition` (
   `xiao_price` varchar(255) DEFAULT '0' COMMENT '销售价格',
   `xiao_total_price` varchar(255) DEFAULT '0' COMMENT '该产品的销售总额',
   `li_run` varchar(255) DEFAULT '0' COMMENT '净利润',
-  `jingou_num` int(255) DEFAULT NULL COMMENT '进购产品总数量'
+  `jingou_num` int(255) DEFAULT NULL COMMENT '进购产品总数量',
+  `product_status` varchar(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of c_product_condition
 -- ----------------------------
-INSERT INTO `c_product_condition` VALUES ('三只松鼠', '10', '3', '340', '0', '0', '0', '0', '340');
-INSERT INTO `c_product_condition` VALUES ('张小妹方便面', '20', '3', '40', '0', '0', '0', '0', '40');
-INSERT INTO `c_product_condition` VALUES ('聚美优品', '100', '2', '10', '0', '0', '0', '0', '10');
-INSERT INTO `c_product_condition` VALUES ('榴莲', '50', '1', '30', '0', '0', '0', '0', '30');
-INSERT INTO `c_product_condition` VALUES ('胡萝卜', '10', '4', '10', '0', '0', '0', '0', '10');
+INSERT INTO `c_product_condition` VALUES ('723244', '大葱', '做饭', '2', '4', '0', '20', '4', '80', '40', '20', '1');
+INSERT INTO `c_product_condition` VALUES ('292682', '方便面', '方便面描述', '3', '3', '0', '10', '10', '100', '70', '10', '1');
+INSERT INTO `c_product_condition` VALUES ('492217', '牙刷', '苹果', '5', '1', '0', '10', '10', '100', '50', '10', '1');
+INSERT INTO `c_product_condition` VALUES ('645033', '毛巾', '用于洗脸', '20', '2', '12', '28', '30', '840', '40', '40', '1');
+INSERT INTO `c_product_condition` VALUES ('569396', '西红柿', '食物', '10', '4', '0', '30', '30', '900', '600', '30', '1');
+INSERT INTO `c_product_condition` VALUES ('720497', '榴莲', '水果类', '100', '1', '1', '29', '150', '4350', '1350', '30', '1');
+
+-- ----------------------------
+-- Table structure for c_selltime_product
+-- ----------------------------
+DROP TABLE IF EXISTS `c_selltime_product`;
+CREATE TABLE `c_selltime_product` (
+  `product_seq` varchar(255) DEFAULT NULL,
+  `product_name` varchar(255) DEFAULT NULL,
+  `xiaoshou_year` varchar(4) DEFAULT NULL,
+  `xiaoshou_month` varchar(2) DEFAULT NULL,
+  `xiaoshou_day` varchar(2) DEFAULT NULL,
+  `xiaoshou_liang` varchar(10) DEFAULT NULL COMMENT '单笔销售量',
+  `xiaoshou_price` varchar(255) DEFAULT NULL,
+  `xiaoshou_total_price` varchar(255) DEFAULT NULL,
+  `operator` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of c_selltime_product
+-- ----------------------------
+INSERT INTO `c_selltime_product` VALUES ('723244', '大葱', '2020', '3', '22', '1', '4', '4', '711027');
+INSERT INTO `c_selltime_product` VALUES ('723244', '大葱', '2020', '3', '22', '5', '4', '20', '711027');
+INSERT INTO `c_selltime_product` VALUES ('492217', '牙刷', '2020', '3', '22', '5', '10', '50', '711027');
+INSERT INTO `c_selltime_product` VALUES ('292682', '方便面', '2020', '3', '22', '5', '10', '50', '711027');
+INSERT INTO `c_selltime_product` VALUES ('723244', '大葱', '2020', '3', '22', '4', '4', '16', '711027');
+INSERT INTO `c_selltime_product` VALUES ('723244', '大葱', '2020', '3', '29', '5', '4', '20', '711027');
+INSERT INTO `c_selltime_product` VALUES ('723244', '大葱', '2020', '3', '29', '5', '4', '20', '711027');
+INSERT INTO `c_selltime_product` VALUES ('492217', '牙刷', '2020', '3', '29', '1', '10', '10', '711027');
+INSERT INTO `c_selltime_product` VALUES ('645033', '毛巾', '2020', '3', '29', '6', '30', '180', '711027');
+INSERT INTO `c_selltime_product` VALUES ('645033', '毛巾', '2020', '3', '29', '7', '30', '210', '711027');
+INSERT INTO `c_selltime_product` VALUES ('645033', '毛巾', '2020', '3', '29', '10', '30', '300', '711027');
+INSERT INTO `c_selltime_product` VALUES ('645033', '毛巾', '2020', '3', '29', '5', '30', '150', '711027');
+INSERT INTO `c_selltime_product` VALUES ('720497', '榴莲', '2020', '3', '29', '20', '150', '3000', '711027');
+INSERT INTO `c_selltime_product` VALUES ('569396', '西红柿', '2020', '3', '29', '30', '30', '900', '711027');
+INSERT INTO `c_selltime_product` VALUES ('720497', '榴莲', '2020', '3', '29', '1', '150', '150', '711027');
+INSERT INTO `c_selltime_product` VALUES ('720497', '榴莲', '2020', '3', '29', '8', '150', '1200', '711027');
+INSERT INTO `c_selltime_product` VALUES ('492217', '牙刷', '2020', '4', '2', '4', '10', '40', '711026');
+INSERT INTO `c_selltime_product` VALUES ('292682', '方便面', '2020', '4', '2', '5', '10', '50', '711026');

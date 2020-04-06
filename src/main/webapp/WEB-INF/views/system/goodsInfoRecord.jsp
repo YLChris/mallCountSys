@@ -24,7 +24,6 @@
                         <div class="layui-input-inline" style="width:110px;">
                             <select name="searchTerm" >
                                 <option value="productName">商品名称</option>
-                                <option value="catagory">商品分类</option>
                             </select>
                         </div>
                         <div class="layui-input-inline" style="width:145px;">
@@ -39,12 +38,13 @@
             </blockquote>
             <div class="larry-separate"></div>
             <div class="layui-tab-item  layui-show" style="padding: 10px 15px;">
-                <table id="goodConditionTableList" lay-filter="goodConditionTableId"></table>
+                <table id="goodRecordTableList" lay-filter="goodRecordTableId"></table>
             </div>
         </div>
     </div>
 </div>
 <script type="text/javascript">
+    var productFlag;
     layui.config({
         base : "${ctx}/static/js/"
     }).use(['form', 'table', 'layer','common'], function () {
@@ -58,9 +58,9 @@
 
         /**商品表格加载*/
         table.render({
-            elem: '#goodConditionTableList',
-            url: '${ctx}/cProduct/goodsKuCun.do',
-            id:'goodConditionTableId',
+            elem: '#goodRecordTableList',
+            url: '${ctx}/cProduct/goodsRecordInfo.do',
+            id:'goodRecordTableId',
             method: 'post',
             height:'full-140',
             skin:'row',
@@ -69,14 +69,13 @@
             cols: [[
                 {type:"numbers",title: '序号'},
                 {field:'productName', title: '商品名称',align:'center' },
-                {field:'catagory', title: '商品分类',align:'center',templet: '#titleTpl'},
-                {field:'productPrice', title: '商品进购价格',align:'center'},
-                {field:'jingouNum', title: '该类商品进购总数',align:'center' },
-                {field:'kuCunLiang', title: '商品库存量',align:'center' },
-                {field:'xiaoLiang', title: '商品销量',align:'center' },
-                {field:'xiaoPrice', title: '商品出售价格',align:'center' },
-                {field:'xiaoTotalPrice', title: '商品销售总额',align:'center' },
-                {field:'liRun', title: '该类商品净利润',align:'center' }
+                {field:'xiaoshouLiang', title: '单批次销量',align:'center' },
+                {field:'xiaoshouPrice', title: '商品售价',align:'center' },
+                {field:'xiaoshouTotalPrice', title: '单批次总收益',align:'center' },
+                {field:'xiaoshouYear', title: '年份',align:'center'},
+                {field:'xiaoshouMonth', title: '月份',align:'center'},
+                {field:'xiaoshouDay', title: '日期',align:'center'},
+                {field:'operator', title: '收费员',align:'center'}
             ]],
             page: true,
             done: function (res, curr, count) {
@@ -85,19 +84,12 @@
             }
         });
 
-        /**导出库存信息*/
-        $(".excelUserExport_btn").click(function(){
-            var url = '${ctx}/cProduct/excel_sellProudctKuCun_export.do';
-            $("#roleSearchForm").attr("action",url);
-            $("#roleSearchForm ").submit();
-        });
-
         /**查询*/
         $(".goodsConditionSearchList_btn").click(function(){
             var loading = layer.load(0,{ shade: [0.3,'#000']});
             //监听提交
             form.on('submit(goodsConditionSearchFilter)', function (data) {
-                table.reload('goodConditionTableId',{
+                table.reload('goodRecordTableId',{
                     where: {
                         searchTerm:data.field.searchTerm,
                         searchContent:data.field.searchContent
@@ -113,20 +105,64 @@
 
         });
 
+        /**导出员工信息*/
+        $(".excelUserExport_btn").click(function(){
+            var url = '${ctx}/cProduct/excel_sellProudctReport_export.do';
+            $("#roleSearchForm").attr("action",url);
+            $("#roleSearchForm ").submit();
+        });
 
         /**监听工具条*/
-        table.on('tool(goodConditionTableId)', function(obj) {
+        table.on('tool(goodRecordTableId)', function(obj) {
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值
 
             //修改商品
             if(layEvent === 'good_edit') {
                 var productId = data.productId;
-                var url = "${ctx}/cProduct/goods_update.do?productId="+productId;
-                common.cmsLayOpen('编辑商品',url,'550px','340px');
-
+                var url = "${ctx}/cProduct/goodsChuShou_edit.do?productId="+productId;
+                layui.layer.open({
+                    title : '<i class="larry-icon larry-bianji3"></i>'+'编辑商品',
+                    type : 2,
+                    skin : 'layui-layer-molv',
+                    content : url,
+                    area: ['550px', '340px'],
+                    resize:true,
+                    anim:1,
+                    success : function(layero, index){
+                        var body = layer.getChildFrame('body', index);
+                        var iframeWin = layero.find('iframe')[0].contentWindow;//新iframe窗口的对象
+                        body.find("#productName").val(data.productName);
+                        body.find("#productDesc").val(data.productDesc);
+                        body.find("#xiaoPrice").val(data.xiaoPrice);
+                        body.find("#productSeq").val(data.productSeq);
+                        productFlag = data.productStatus;
+                        switch (data.catagory) {
+                            case "1":
+                                body.find("#catagory").val("水果");
+                                break;
+                            case "2":
+                                body.find("#catagory").val("衣服");
+                                break;
+                            case "3":
+                                body.find("#catagory").val("食品");
+                                break;
+                            case "4":
+                                body.find("#catagory").val("蔬菜");
+                                break;
+                        }
+                        form.render();
+                        if(productFlag == 1){
+                            body.find("#up").attr("checked",true);
+                            iframeWin.layui.form.render();
+                        }else if(productFlag == 0){
+                            body.find("#down").attr("checked",true);
+                            iframeWin.layui.form.render();
+                        }
+                    }
+                });
                 //商品授权
-            }else if(layEvent === 'role_grant'){
+            }else if(layEvent === 'goodXiajia'){
 
                 var roleId = data.roleId;
                 var roleStatus = data.roleStatus;
@@ -136,26 +172,18 @@
                 }
                 var url =  "${ctx}/role/role_grant.do?roleId="+roleId;
                 common.cmsLayOpen('商品授权',url,'255px','520px');
-
-
-                //商品失效
-            }else if(layEvent === 'role_fail') {
-                var roleId = data.roleId;
-                var roleStatus = data.roleStatus;
-                if(roleStatus == 1){
-                    common.cmsLayErrorMsg("当前商品已失效");
-                    return false;
-                }
-
-                var url = "${ctx}/role/ajax_role_fail.do";
-                var param = {roleId:roleId};
-                common.ajaxCmsConfirm('系统提示', '失效商品、解除商品、用户、菜单绑定关系?',url,param);
-
             }
         });
     });
 
 
+</script>
+<!--工具条 -->
+<script type="text/html" id="goodBar">
+    <div class="layui-btn-group">
+        <a class="layui-btn layui-btn-xs" lay-event="good_edit"><i class="layui-icon larry-icon larry-bianji2"></i> 商品信息修改</a>
+        <%--<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="goodXiajia"><i class="layui-icon larry-icon larry-bianji2"></i> 商品下架</a>--%>
+    </div>
 </script>
 
 <script type="text/html" id="titleTpl">
@@ -169,6 +197,14 @@
     <span>蔬菜</span>
     {{#  } }}
 </script>
+<script type="text/html" id="proFlag">
+    {{#  if(d.productStatus == 0){ }}
+    <span  style="color:red;">未上架</span>
+    {{#  }else if(d.productStatus == 1){ }}
+    <span  style="color:green;">已上架</span>
+    {{#  } }}
+</script>
+
 
 </body>
 </html>

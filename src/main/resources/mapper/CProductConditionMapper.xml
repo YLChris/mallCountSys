@@ -12,10 +12,13 @@
         <result property="xiaoTotalPrice" column="xiao_total_price" jdbcType="VARCHAR"/>
         <result property="liRun" column="li_run" jdbcType="VARCHAR"/>
         <result property="jingouNum" column="jingou_num" jdbcType="INTEGER"/>
+        <result property="productDesc" column="product_desc" jdbcType="VARCHAR"/>
+        <result property="productStatus" column="product_status" jdbcType="VARCHAR"/>
+        <result property="productSeq" column="product_seq" jdbcType="VARCHAR"/>
     </resultMap>
 
     <insert id="insertCproductCondition"  parameterType="com.yxb.mall.domain.vo.CProductCondition">
-        insert into contentmanagersystem_db.c_product_condition
+        insert into c_product_condition
         <trim prefix="(" suffix=")" suffixOverrides="," >
             <if test="productName != null" >
                 product_name,
@@ -39,10 +42,16 @@
                 xiao_total_price,
             </if>
             <if test="liRun != null" >
-                liRun,
+                li_run,
             </if>
             <if test="jingouNum != null" >
-                jingou_num
+                jingou_num,
+            </if>
+            <if test="productSeq != null" >
+                product_seq,
+            </if>
+            <if test="productDesc != null" >
+                product_desc
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides="," >
@@ -71,12 +80,79 @@
                 #{liRun,jdbcType=VARCHAR},
             </if>
             <if test="jingouNum != null" >
-                #{jingouNum,jdbcType=INTEGER}
+                #{jingouNum,jdbcType=INTEGER},
+            </if>
+            <if test="productSeq != null" >
+                #{productSeq,jdbcType=VARCHAR},
+            </if>
+            <if test="productDesc != null" >
+                #{productDesc,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <insert id="insertSellTimeCproduct" parameterType="com.yxb.mall.domain.vo.CSelltimeProduct">
+        insert into c_selltime_product
+        <trim prefix="(" suffix=")" suffixOverrides="," >
+            <if test="productSeq != null" >
+                product_seq,
+            </if>
+            <if test="productName != null" >
+                product_name,
+            </if>
+            <if test="xiaoshouYear != null" >
+                xiaoshou_year,
+            </if>
+            <if test="xiaoshouMonth != null" >
+                xiaoshou_month,
+            </if>
+            <if test="xiaoshouDay != null" >
+                xiaoshou_day,
+            </if>
+            <if test="xiaoshouLiang != null" >
+                xiaoshou_liang,
+            </if>
+            <if test="xiaoshouPrice != null" >
+                xiaoshou_price,
+            </if>
+            <if test="xiaoshouTotalPrice != null" >
+                xiaoshou_total_price,
+            </if>
+            <if test="operator != null" >
+                operator
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides="," >
+            <if test="productSeq != null" >
+                #{productSeq,jdbcType=VARCHAR},
+            </if>
+            <if test="productName != null" >
+                #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouYear != null" >
+                #{xiaoshouYear,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouMonth != null" >
+                #{xiaoshouMonth,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouDay != null" >
+                #{xiaoshouDay,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouLiang != null" >
+                #{xiaoshouLiang,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouPrice != null" >
+                #{xiaoshouPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouTotalPrice != null" >
+                #{xiaoshouTotalPrice,jdbcType=VARCHAR},
+            </if>
+            <if test="xiaoshouPrice != null" >
+                #{operator,jdbcType=VARCHAR},
             </if>
         </trim>
     </insert>
     <update id="updateCproductCondition" parameterType="com.yxb.mall.domain.vo.CProductCondition">
-        update contentmanagersystem_db.c_product_condition
+        update c_product_condition
         <set>
             <if test="productName != null and productName != ''">
                 product_name = #{productName},
@@ -116,30 +192,36 @@
             <if test="catagory != null and catagory != ''">
                 and catagory = #{catagory}
             </if>
+            <if test="productSeq != null and productSeq != ''">
+                and product_seq = #{productSeq}
+            </if>
         </where>
     </update>
     <select id="queryCproductConditionByCProduct" resultMap="CProductConditionMap">
         select
-            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
-          from contentmanagersystem_db.c_product_condition
+            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+          from c_product_condition
         <where>
-            <if test="productName != null and productName != ''">
-                and product_name = #{productName}
+            <if test="cSelltimeProduct.productName != null and cSelltimeProduct.productName != ''">
+                and product_name = #{cSelltimeProduct.productName}
             </if>
-            <if test="productPrice != null and productPrice != ''">
-                and product_price = #{productPrice}
+            <if test="cSelltimeProduct.productPrice != null and cSelltimeProduct.productPrice != ''">
+                and product_price = #{cSelltimeProduct.productPrice}
             </if>
-            <if test="catagory != null and catagory != ''">
-                and catagory = #{catagory}
+            <if test="cSelltimeProduct.catagory != null and cSelltimeProduct.catagory != ''">
+                and catagory = #{cSelltimeProduct.catagory}
             </if>
-            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'productName' ">
-                AND  product_name LIKE CONCAT('%', #{searchContent,jdbcType=VARCHAR}, '%')
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'productName' ">
+                AND  product_name LIKE CONCAT('%', #{cSelltimeProduct.searchContent,jdbcType=VARCHAR}, '%')
             </if>
-            <if test="searchTerm != null and searchTerm != '' and searchContent != null and  searchContent != '' and  searchTerm == 'catagory' ">
-                AND catagory = #{searchContent}
+            <if test="cSelltimeProduct.searchTerm != null and cSelltimeProduct.searchTerm != '' and cSelltimeProduct.searchContent != null and  cSelltimeProduct.searchContent != '' and  cSelltimeProduct.searchTerm == 'catagory' ">
+                AND catagory = #{cSelltimeProduct.searchContent}
+            </if>
+            <if test="cSelltimeProduct.productSeq != null and cSelltimeProduct.productSeq != ''">
+                AND product_seq = #{cSelltimeProduct.productSeq}
             </if>
         </where>
-        LIMIT #{start},#{limit}
+        LIMIT #{start},#{end}
     </select>
     <select id="selectCountCProductCondition" resultType="java.lang.Long">
         select count(*)
@@ -166,106 +248,71 @@
     <!--获取产品种类等信息-->
     <select id="getGoodsPageList" resultMap="CProductConditionMap">
         select
-        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
-        from contentmanagersystem_db.c_product_condition
+        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+        from c_product_condition d
+        where d.xiao_price != 0 and d.product_status != 0
     </select>
 
-    <!--  &lt;!&ndash;查询单个&ndash;&gt;
-      <select id="queryById" resultMap="CProductConditionMap">
-          select
-            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
-          from contentmanagersystem_db.c_product_condition
-          where  = #{}
-      </select>
+    <!--根据产品id查询是否存在产品-->
+    <select id="queryCproductConditionByCProductCondition" resultMap="CProductConditionMap">
+        select
+        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+        from c_product_condition
+        <where>
+            <if test="productSeq != null and productSeq != ''">
+                AND product_seq = #{productSeq}
+            </if>
+        </where>
+    </select>
+    <!--查看 -->
+    <select id="queryProductNameBySeq" resultType="java.lang.String">
+        select product_name from c_product_condition c where c.product_seq = #{productSeq}
+    </select>
 
-      &lt;!&ndash;查询指定行数据
-      <select id="queryAllByLimit" resultMap="CProductConditionMap">
-          select
-            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
-          from contentmanagersystem_db.c_product_condition
-          limit #{offset}, #{limit}
-      </select>
+    <select id="querySame" resultMap="CProductConditionMap">
+        select
+        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+        from c_product_condition
+        where product_name = #{productName}
+        and product_price = #{productPrice}
+        and catagory = #{catagory}
+    </select>
+    <select id="querySameBySeq" resultMap="CProductConditionMap">
+        select
+        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+        from c_product_condition
+        where product_seq =#{productSeq}
+    </select>
+    <select id="queryProductLuRun" resultMap="CProductConditionMap">
+        select
+        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+        from c_product_condition
+    </select>
 
-      &lt;!&ndash;通过实体作为筛选条件查询&ndash;&gt;
-      <select id="queryAll" resultMap="CProductConditionMap">
-          select
-            product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num
-          from contentmanagersystem_db.c_product_condition
-          <where>
-              <if test="productName != null and productName != ''">
-                  and product_name = #{productName}
-              </if>
-              <if test="productPrice != null and productPrice != ''">
-                  and product_price = #{productPrice}
-              </if>
-              <if test="catagory != null and catagory != ''">
-                  and catagory = #{catagory}
-              </if>
-              <if test="kuCunLiang != null">
-                  and ku_cun_liang = #{kuCunLiang}
-              </if>
-              <if test="xiaoLiang != null">
-                  and xiao_liang = #{xiaoLiang}
-              </if>
-              <if test="xiaoPrice != null and xiaoPrice != ''">
-                  and xiao_price = #{xiaoPrice}
-              </if>
-              <if test="xiaoTotalPrice != null and xiaoTotalPrice != ''">
-                  and xiao_total_price = #{xiaoTotalPrice}
-              </if>
-              <if test="liRun != null and liRun != ''">
-                  and li_run = #{liRun}
-              </if>
-              <if test="jingouNum != null">
-                  and jingou_num = #{jingouNum}
-              </if>
-          </where>
-      </select>
+    <!--根据产品id更新-->
+    <update id="updateCproductConditionByProductId" parameterType="com.yxb.mall.domain.vo.CProductCondition">
+        update c_product_condition
+        <set>
+            <if test="xiaoPrice != null and xiaoPrice != ''">
+                xiao_price = #{xiaoPrice},
+            </if>
+            <if test="productDesc != null and productDesc != ''">
+                product_desc = #{productDesc},
+            </if>
+            <if test="productStatus != null">
+                product_status = #{productStatus},
+            </if>
+        </set>
+        <where>
+            <if test="productSeq != null and productSeq != ''">
+                and product_seq = #{productSeq}
+            </if>
+        </where>
+    </update>
 
-      &lt;!&ndash;新增所有列&ndash;&gt;
-      <insert id="insert" keyProperty="" useGeneratedKeys="true">
-          insert into contentmanagersystem_db.c_product_condition(product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num)
-          values (#{productName}, #{productPrice}, #{catagory}, #{kuCunLiang}, #{xiaoLiang}, #{xiaoPrice}, #{xiaoTotalPrice}, #{liRun}, #{jingouNum})
-      </insert>
-
-      &lt;!&ndash;通过主键修改数据&ndash;&gt;
-      <update id="update">
-          update contentmanagersystem_db.c_product_condition
-          <set>
-              <if test="productName != null and productName != ''">
-                  product_name = #{productName},
-              </if>
-              <if test="productPrice != null and productPrice != ''">
-                  product_price = #{productPrice},
-              </if>
-              <if test="catagory != null and catagory != ''">
-                  catagory = #{catagory},
-              </if>
-              <if test="kuCunLiang != null">
-                  ku_cun_liang = #{kuCunLiang},
-              </if>
-              <if test="xiaoLiang != null">
-                  xiao_liang = #{xiaoLiang},
-              </if>
-              <if test="xiaoPrice != null and xiaoPrice != ''">
-                  xiao_price = #{xiaoPrice},
-              </if>
-              <if test="xiaoTotalPrice != null and xiaoTotalPrice != ''">
-                  xiao_total_price = #{xiaoTotalPrice},
-              </if>
-              <if test="liRun != null and liRun != ''">
-                  li_run = #{liRun},
-              </if>
-              <if test="jingouNum != null">
-                  jingou_num = #{jingouNum},
-              </if>
-          </set>
-          where  = #{}
-      </update>
-
-      &lt;!&ndash;通过主键删除&ndash;&gt;
-      <delete id="deleteById">
-          delete from contentmanagersystem_db.c_product_condition where  = #{}
-      </delete>-->
-
+    <select id="queryCproductConditionByCProduct1" resultMap="CProductConditionMap">
+        select
+        product_name, product_price, catagory, ku_cun_liang, xiao_liang, xiao_price, xiao_total_price, li_run, jingou_num,product_desc,product_status,product_seq
+        from c_product_condition
+    </select>
 </mapper>

@@ -1,4 +1,4 @@
-package com.yxb.mall.test;
+package com.yxb.cms.test;
 
 import com.yxb.mall.Application;
 import com.yxb.mall.handler.RedisClient;
@@ -7,6 +7,8 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.Date;
 
 /**
  * Spring boot 测试
@@ -25,7 +27,9 @@ public class AppTest {
 
 
     @Test
-    public void test() {}
+    public void test() {
+
+    }
 
     @Test
     public void test2() {

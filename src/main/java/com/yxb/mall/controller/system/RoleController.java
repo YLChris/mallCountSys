@@ -108,7 +108,7 @@ public class RoleController extends BasicController {
     public String toRoleAddPage(Model model) {
         //新增页面标识
         model.addAttribute("pageFlag", "addPage");
-        return "system/goods_edit";
+        return "system/role_edit";
     }
 
     /**
