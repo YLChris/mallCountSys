@@ -10,7 +10,7 @@
         <scmVersion>HEAD</scmVersion>
         <env>beta</env>
         <log4j>1.2.16</log4j>
-        <commons-beanutils.version>1.8.3</commons-beanutils.version>
+        <commons-beanutils.version>1.9.2</commons-beanutils.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
 
     </properties>
